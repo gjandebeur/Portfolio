@@ -5,6 +5,6 @@ title: "Scripts"
 
 #Collection of scripts I've written:
 -[Script 1](C:/GPiBS/Rotation1/test/scripts/old_workflow.qmd)
--[Script 2]()
+-[Script 2](C:/GPiBS/Rotation1/test/scripts/genome_assembly.qmd)
 -[Script 3]()
 
