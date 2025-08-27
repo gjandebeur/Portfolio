@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gjandebeur’s Github – Gjandebeur Projects</title>
+<title>old_workflow – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scripts.html"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">scripts</span></a>
   </li>  
 </ul>
@@ -108,15 +108,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#pipeline-for-analysis-of-the-old-chemistry-rna002" id="toc-pipeline-for-analysis-of-the-old-chemistry-rna002" class="nav-link active" data-scroll-target="#pipeline-for-analysis-of-the-old-chemistry-rna002">Pipeline for analysis of the Old Chemistry (RNA002)</a>
+  <ul class="collapse">
+  <li><a href="#beginning-batch-script-to-run-on-slurm" id="toc-beginning-batch-script-to-run-on-slurm" class="nav-link" data-scroll-target="#beginning-batch-script-to-run-on-slurm">Beginning batch script to run on slurm</a></li>
+  </ul></li>
+  <li><a href="#counting-transcript-abundance-and-plotting-differential-expression-volcano-plots" id="toc-counting-transcript-abundance-and-plotting-differential-expression-volcano-plots" class="nav-link" data-scroll-target="#counting-transcript-abundance-and-plotting-differential-expression-volcano-plots">Counting Transcript Abundance and Plotting Differential Expression Volcano Plots</a>
+  <ul class="collapse">
+  <li><a href="#this-is-copy-pasted-from-my-script-but-theres-only-like-3-parts-youll-need-to-change-ive-already-combined-the-deseq2-and-volcano-plot-step-into-one-so-you-should-only-have-to-update-the-parts-of-the-following-code-that-ive-commented." id="toc-this-is-copy-pasted-from-my-script-but-theres-only-like-3-parts-youll-need-to-change-ive-already-combined-the-deseq2-and-volcano-plot-step-into-one-so-you-should-only-have-to-update-the-parts-of-the-following-code-that-ive-commented." class="nav-link" data-scroll-target="#this-is-copy-pasted-from-my-script-but-theres-only-like-3-parts-youll-need-to-change-ive-already-combined-the-deseq2-and-volcano-plot-step-into-one-so-you-should-only-have-to-update-the-parts-of-the-following-code-that-ive-commented.">This is copy pasted from my script but theres only like 3 parts youll need to change, ive already combined the DEseq2 and volcano plot step into one so you should only have to update the parts of the following code that I’ve commented.</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gjandebeur’s Github</h1>
+<h1 class="title">old_workflow</h1>
 </div>
 
 
@@ -133,10 +146,196 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Current PhD Student at OUHSC interested in computational biology and bioinformatics</p>
-<p>Collection of Projects I’ve worked on.</p>
+<section id="pipeline-for-analysis-of-the-old-chemistry-rna002" class="level1">
+<h1>Pipeline for analysis of the Old Chemistry (RNA002)</h1>
+<p>full start to finish workflow for basecalling and minimapping for rna002 data <em>designed for OSCER supercomputer, ignore batch script/slurm parts for local/others</em></p>
+<section id="beginning-batch-script-to-run-on-slurm" class="level2">
+<h2 class="anchored" data-anchor-id="beginning-batch-script-to-run-on-slurm">Beginning batch script to run on slurm</h2>
+<pre><code>#!/bin/bash
+#SBATCH --partition=rnafold                       #where it runs (use "rnafold" or "normal")
+#SBATCH --job-name=12samples_dorado                     #name your job 
+#SBATCH --output=dorado1_ALLSAMPLES_output.txt              #keep _output at end but rename
+#SBATCH --error=dorado1_ALLSAMPLES_debug.txt          #keep _debug at end but u can change name
+#SBATCH --cpus-per-task=2   #use as written. if u need more power/gpu then do "gpus-per-node=1" 
+#SBATCH --time=24:00:00          #this just sets to 1 day  
+#SBATCH --mem=16G               #rn its set to 16gb, i rarely go above 32gb for big jobs</code></pre>
+<p>I’ve installed all the software you will need so just copy and paste the path I provide as given and it’ll work (lmk if its prevented by permissions or anything)</p>
+<p><strong>The first step is to run dorado to basecall your data (takes fast5 and reads as A,C,T,G). The software can’t write “U” so every call will say “T” instead but it means uracil.</strong></p>
+<p>For any script youll add that sbatch to top, MAKING SURE that #!/bin/bash is on line 1. I’ve spent hours before looking at why my code wont run to find out this is why</p>
+<p>The following modules need to be loaded to run dorado, these are dependencies that are kinda like R packages you would load in (but in UNIX). Just copy paste this chunk after the sbatch part but before the dorado script.</p>
+<pre><code>    module load GCC
+    module load PyTorch
+    module load FlexiBLAS/3.3.1-GCC-12.3.0  
+    module load FFmpeg/4.4.2-GCCcore-11.3.0 
+    module load HTSlib
+    module load protobuf
+
+    module load SAMtools/1.16.1-GCC-11.3.0 #this ones for minimap but add here too</code></pre>
+<p>To run dorado youll follow this formatting for reference, adding “\” to the end of the line tells your system that the command isn’t done being written yet. So basically if you have extra spaces or anything other than this specific thing at the end of the line, your code wont work. So for every command I only add 1 space between and change lines by pressing enter only.</p>
+<p>#theres a slight chance that youre gonna get an error about formatting, if so its because the model needs to be placed somewhere else, just chatgpt the chunk of code and your error and you should be able to debug it.</p>
+<pre><code>    "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/software/dorado-0.8.2/dorado-0.8.2-    linux-x64/bin/dorado" \ 
+    basecaller \ 
+    "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/software/dorado-0.8.2/dorado-0.8.2-linux-x64/models/rna002_70bps_hac@v3/" \
+    --min-qscore 10 \
+    --emit-fastq &gt; "/ADDYOURUSERHERE/ANDOUTPUT/PATH.fastq"  </code></pre>
+<p><em>if you ever chose to do modifications then u have to remove the “–emit-fastq” tag and change the output to be a “.bam”, as fastq cant carry the mod data over. Theres a couple more fancy steps to this so lmk if you decide to do mods.</em></p>
+<p>I prefer to use absolute paths because its way easier to see where the outputs going. make sure to have the “&gt;” as it says redirect this entire command into this output.</p>
+<p>A qscore of 10 only keeps calls &gt;=90% calls, can reduce to ~6-8 if it significantly reduces your data amount.</p>
+<p><strong>The next step is minimap2, where you take the fastq output and align it to your reference. I’ll attach the path for the human transcriptome/genome, but I don’t have the viral reference.</strong></p>
+<pre><code>                    "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/software/marginAlign/submodules/minimap2/minimap2" \
+    -ax splice -uf -k14 -y --secondary=no \     #keep these settings. its importnat
+    "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/reference/GRCh38.fa" \ #this is your ref file (MUST BE .fasta or .fa) 
+    "/this/is/your/dorado/output/that/your/mapping.fastq" &gt; "               "/this/is/your/output/alignedsplice.sam    </code></pre>
+<p><em>If you would rather use the transcriptome I’ll attach the path to the updated version, just replace the genome part with it. its already been indexed too but if needed ever just do samtools index before any .fa to index it</em> <strong>path : “/ourdisk/hpc/rnafold/gjandebeur/dont_archive/reference/gencode.v47.transcripts.fa”</strong></p>
+<p>The output has to stay .sam but u can change the name to whatever, I prefer naming it alignedsplice to show that its aligned and has splice variants (just improves mapping slightly but unimportant).</p>
+<p>Next step you have to sort your reads, just makes it easier for the computer to understand and converts format to a computer-readable one only (bam).</p>
+<p><strong>output goes first in this (the -o flag), and just add the input directly on end with only a space after the output, no other characters. output must be .bam and input is the .sam</strong></p>
+<pre><code>    samtools sort -o "/THIS/IS/OUTPUT/FIRST/SORTED.BAM" "/This/is/input/alignedsplice.sam" 
+
+    samtools flagstat  "/THIS/IS/OUTPUT/FIRST/SORTED.BAM"  </code></pre>
+<p><strong>Flagstat shows the stats that you want! (total aligned #, mapped #, and map %). This is the info I think you’ll need comparing the viral reference to using genome or transcriptome.</strong></p>
+</section>
+</section>
+<section id="counting-transcript-abundance-and-plotting-differential-expression-volcano-plots" class="level1">
+<h1>Counting Transcript Abundance and Plotting Differential Expression Volcano Plots</h1>
+<p><strong>Now for the really complicated part</strong></p>
+<p>after aligning to the reference, the goal is to count how many copies of each gene is expressed in each sample. This will be done using salmon, which can be installed directly into a conda environment for you (I’ll add the exact code to run for this below too)</p>
+<pre><code>    # Install Salmon in a conda environment
+    conda create -n salmon_env -c bioconda salmon
+    conda activate salmon_env</code></pre>
+<p>So this part can be done on the login node, and add this little chunk of code to your data file, under the #SBATCH part but above your code.</p>
+<pre><code>    echo "linking the Conda environment to $ENV_PATH..."
+    source /opt/oscer/software/Mamba/23.1.0-4/etc/profile.d/conda.sh
+    conda activate salmon_env</code></pre>
+<p>Now for the salmon command itself to quantify. It’s important that the transcriptome is used here as reference because it needs to be able to count isoforms. (the genome has higher accuracy in minimap step than transcript but that shouldn’t change results for this software)</p>
+<p>Salmon likes to put all results into a directory, and then the next step pulls directly from it, so run this command but change to whatever directory your using. End the file name with the sample name you’re running salmon on and don’t add a “/” to the very end, this way the output will separate by sample and work much better for later steps.</p>
+<pre><code>    #mkdir -p "/ourdisk/hpc/rnafold/UR_USER/dont_archive/salmon/BYSAMPLE"</code></pre>
+<p><strong>The following code you shouldn’t need to run if you use my reference transcript file, but for the viral genome (if that ends up being used here) you’ll use this.</strong></p>
+<pre><code>    salmon index -t "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/reference/gencode.v47.transcripts.fa" -i "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/reference/gencode.v47.transcripts_index" -k 31 </code></pre>
+<p>I believe the part after “-i” is saying where the script can write all the little files it creates to index the reference.</p>
+<p><strong>this is the important step</strong></p>
+<pre><code>    salmon quant -t "/ourdisk/hpc/rnafold/gjandebeur/dont_archive/reference/gencode.v47.transcripts.fa" -l A -a
+    "/input/ALIGNED/SORTED/data.bam" -p 8 --seqBias --gcBias -o "/this/is/output/directory/by/sample/"</code></pre>
+<p>Online documentation had stuff on –seqBias and –gcBias so included, but I’m not 100% sure if they’re necessary</p>
+<p>Now for running R on OSCER, just write a normal unix script, and add “Rscript (file)” in that unix script. I’ve heard of people shutting down nodes from running python or R directly on the command line so I would recommend against.</p>
+<p><strong>No clue why but its very difficult to get the R packages working on OSCER, I use alot of ChatGPT when trying to do this and I believe there should be some modules already on oscer that have necessary packages (try module avail R).</strong></p>
+<section id="this-is-copy-pasted-from-my-script-but-theres-only-like-3-parts-youll-need-to-change-ive-already-combined-the-deseq2-and-volcano-plot-step-into-one-so-you-should-only-have-to-update-the-parts-of-the-following-code-that-ive-commented." class="level2">
+<h2 class="anchored" data-anchor-id="this-is-copy-pasted-from-my-script-but-theres-only-like-3-parts-youll-need-to-change-ive-already-combined-the-deseq2-and-volcano-plot-step-into-one-so-you-should-only-have-to-update-the-parts-of-the-following-code-that-ive-commented.">This is copy pasted from my script but theres only like 3 parts youll need to change, ive already combined the DEseq2 and volcano plot step into one so you should only have to update the parts of the following code that I’ve commented.</h2>
+<pre><code>library(txdbmaker)
+library(GenomicFeatures)</code></pre>
+<p><em>GTF file with annotated transcripts/regions</em></p>
+<pre><code>txdb &lt;- makeTxDbFromGFF("gencode.v47.annotation.gtf")
+
+k &lt;- keys(txdb, keytype = "TXNAME")  # make sure keytype exists
+tx2gene &lt;- AnnotationDbi::select(txdb, keys = k, columns = "GENEID", keytype = "TXNAME")</code></pre>
+<p><strong>metadata is just sample and condition listed in “ format”</strong></p>
+<pre><code>library(tidyverse)
+metadata &lt;- read_delim("metadata.txt", delim = "\t", 
+                   escape_double = FALSE, trim_ws = TRUE)
 
 
+setwd("C:/Users/gjand/Downloads/Schroeder_Lab/data/salmonm6a")
+files &lt;- paste(metadata$run, "/quant.sf", sep = "")
+library(tximport)
+txi &lt;- tximport(files, type = "salmon", tx2gene = tx2gene, txOut = F, ignoreAfterBar = T)
+
+txi$counts |&gt; head()
+
+
+
+library(DESeq2)
+metadata$individual &lt;- as.factor(metadata$individual)
+
+#  prepare deseq object
+dds &lt;- DESeqDataSetFromTximport(txi = txi, colData = metadata, 
+                            design = ~individual + condition)
+
+dds &lt;- DESeq(dds, parallel = T)
+
+
+# non batch corrected PCA
+vsd &lt;- rlog(dds, blind = F)
+pca_data &lt;- plotPCA(vsd, intgroup = c("condition", "individual"), returnData = TRUE)
+percentVar &lt;- round(100 * attr(pca_data, "percentVar"))
+library(cowplot)
+ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = individual)) +
+  geom_point(size = 3) +
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  ggtitle("Principal Component Analysis") +
+ # scale_color_manual(values = c("black", "gray65", "darkblue", "cadetblue3", "springgreen4", "springgreen2")) +
+  theme(aspect.ratio = 1) +
+  theme_cowplot(24) 
+# stat_ellipse(aes(group = Condition), type = "t", level = 0.65)
+
+# ggsave(plot = last_plot(),
+#        "/name/of/save/output/path.png",
+#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+
+
+########################</code></pre>
+<p><strong>PCA to measure correlation between samples (need to remove batch-effect from individuals so that condition is the main difference)</strong></p>
+<pre><code>    # Batch corrected PCA
+vsd &lt;- rlog(dds, blind = F)
+assay(vsd) &lt;- limma::removeBatchEffect(assay(vsd), vsd$individual)
+pca_data &lt;- plotPCA(vsd, intgroup = c("condition", "individual"), returnData = TRUE)
+percentVar &lt;- round(100 * attr(pca_data, "percentVar"))
+
+# Custom PCA plot
+ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = individual)) +
+  geom_point(size = 6) +
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  ggtitle("Principal Component Analysis") +
+  theme(aspect.ratio = 1) +
+  theme_cowplot(24) +
+  stat_ellipse(type = "t", level = 0.95)
+
+# ggsave(plot = last_plot(),
+#        "/name/of/save/output/path.png",
+#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+
+library(org.Hs.eg.db)
+
+mapping &lt;- AnnotationDbi::select(org.Hs.eg.db, keys = keys(org.Hs.eg.db),
+                             columns = c("GENENAME", "ENSEMBL", "SYMBOL", "REFSEQ"))
+
+
+library(biomaRt)
+mart &lt;- useMart("ensembl", dataset="hsapiens_gene_ensembl")
+
+# biomaRt can sometimes handle versioned IDs directly
+listAttributes(mart) -&gt;atts
+
+mapping &lt;- getBM(attributes=c("ensembl_gene_id", "ensembl_gene_id_version", "external_gene_name",
+                          "description"),
+             filters="ensembl_gene_id_version",
+           values=tx2gene$GENEID,
+             mart=mart)
+
+
+
+# get differential eaxpression results data frame
+res_df &lt;- results(dds, contrast = c("condition", "smoke", "ctrl"), tidy = T)
+
+res_df_ann &lt;- res_df %&gt;%
+  left_join(., mapping, by = c("row" = "ensembl_gene_id_version"))
+
+
+library(EnhancedVolcano)
+EnhancedVolcano(res_df_ann,
+            lab = res_df_ann$external_gene_name,
+            x = 'log2FoldChange',
+            y = 'padj',
+            pointSize = 2
+            )
+# 
+
+    cat("All steps completed.\n")</code></pre>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

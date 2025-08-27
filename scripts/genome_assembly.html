@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gjandebeur’s Github – Gjandebeur Projects</title>
+<title>genome_assembly – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./scripts.html"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">scripts</span></a>
   </li>  
 </ul>
@@ -108,15 +108,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#genome_assembly-library-prep-through-snp-analyses" id="toc-genome_assembly-library-prep-through-snp-analyses" class="nav-link active" data-scroll-target="#genome_assembly-library-prep-through-snp-analyses">genome_assembly library prep through SNP analyses</a>
+  <ul class="collapse">
+  <li><a href="#first-obtain-.fastq-file-and-run-through-fastqc-for-initial-qc-checks-on-the-raw-data" id="toc-first-obtain-.fastq-file-and-run-through-fastqc-for-initial-qc-checks-on-the-raw-data" class="nav-link" data-scroll-target="#first-obtain-.fastq-file-and-run-through-fastqc-for-initial-qc-checks-on-the-raw-data">First obtain .fastq file and run through fastQC for initial QC checks on the raw data</a></li>
+  <li><a href="#run-fastplong-on-long-read-data-ont-and-fastp-on-short-read-illumina" id="toc-run-fastplong-on-long-read-data-ont-and-fastp-on-short-read-illumina" class="nav-link" data-scroll-target="#run-fastplong-on-long-read-data-ont-and-fastp-on-short-read-illumina">Run fastplong on long-read data (ONT) and fastp on short-read (Illumina)</a></li>
+  <li><a href="#run-fastp-for-short-read-data-complicated-because-paired-analysis" id="toc-run-fastp-for-short-read-data-complicated-because-paired-analysis" class="nav-link" data-scroll-target="#run-fastp-for-short-read-data-complicated-because-paired-analysis">Run fastp for short-read data (complicated because PAIRED analysis)</a></li>
+  <li><a href="#rerun-fastqc-on-the-fastpfastplong-files-for-post-filtered-qc." id="toc-rerun-fastqc-on-the-fastpfastplong-files-for-post-filtered-qc." class="nav-link" data-scroll-target="#rerun-fastqc-on-the-fastpfastplong-files-for-post-filtered-qc.">rerun FastQC on the fastp/fastplong files for post-filtered QC.</a></li>
+  <li><a href="#run-multiqc-on-both-raw-and-filtered-outputs-separate-by-ont-and-illumina" id="toc-run-multiqc-on-both-raw-and-filtered-outputs-separate-by-ont-and-illumina" class="nav-link" data-scroll-target="#run-multiqc-on-both-raw-and-filtered-outputs-separate-by-ont-and-illumina">Run MultiQC on both raw and filtered outputs (separate by ONT and Illumina)</a></li>
+  <li><a href="#the-next-part-branches-into-two-aspects-de-novo-assembly-and-reference-based-assembly." id="toc-the-next-part-branches-into-two-aspects-de-novo-assembly-and-reference-based-assembly." class="nav-link" data-scroll-target="#the-next-part-branches-into-two-aspects-de-novo-assembly-and-reference-based-assembly.">The next part branches into two aspects: de novo assembly and reference-based assembly.</a></li>
+  <li><a href="#to-perform-de-novo-assembly-of-genome-must-be-on-ont-data" id="toc-to-perform-de-novo-assembly-of-genome-must-be-on-ont-data" class="nav-link" data-scroll-target="#to-perform-de-novo-assembly-of-genome-must-be-on-ont-data">To perform De Novo Assembly of Genome (must be on ONT data)</a>
+  <ul class="collapse">
+  <li><a href="#reference-based-assembly-minimap2" id="toc-reference-based-assembly-minimap2" class="nav-link" data-scroll-target="#reference-based-assembly-minimap2">Reference-Based Assembly (minimap2)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gjandebeur’s Github</h1>
+<h1 class="title">genome_assembly</h1>
 </div>
 
 
@@ -133,10 +151,202 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Current PhD Student at OUHSC interested in computational biology and bioinformatics</p>
-<p>Collection of Projects I’ve worked on.</p>
+<section id="genome_assembly-library-prep-through-snp-analyses" class="level1">
+<h1>genome_assembly library prep through SNP analyses</h1>
+<p>full pipeline for genome assembly (de novo &amp; reference-based)</p>
+<p>library prep for assembly (fastQC, fastp/fastplong, minimap2/flye)</p>
+<section id="first-obtain-.fastq-file-and-run-through-fastqc-for-initial-qc-checks-on-the-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="first-obtain-.fastq-file-and-run-through-fastqc-for-initial-qc-checks-on-the-raw-data">First obtain .fastq file and run through fastQC for initial QC checks on the raw data</h3>
+<pre><code>for loop to perform fastQC
+for file in /example/directory/*.fastq.gz
+do
+    fastqc "$file" --threads 8 --outdir /example/output/fastQC/
+done</code></pre>
+</section>
+<section id="run-fastplong-on-long-read-data-ont-and-fastp-on-short-read-illumina" class="level3">
+<h3 class="anchored" data-anchor-id="run-fastplong-on-long-read-data-ont-and-fastp-on-short-read-illumina">Run fastplong on long-read data (ONT) and fastp on short-read (Illumina)</h3>
+<pre><code>for file in /example/directory/*.fastq.gz
+do
+    fname=$(basename "$file")
+    
+    fastplong \
+          -i "$file" \
+          -o "/example/output/$sample_trim.fastq.gz" \
+          --disable_adapter_trimming \
+          -q 15 -l 30 -n 0 \
+          --cut_front --cut_tail -M 20 -W 4 \
+          --trim_poly_x \
+          --json "/output/${sample}_fastplong.json" \
+          --html "/output/${sample}_fastplong.html" \
+          --thread 8 
+
+    echo "$sample finished"
+done</code></pre>
+</section>
+<section id="run-fastp-for-short-read-data-complicated-because-paired-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="run-fastp-for-short-read-data-complicated-because-paired-analysis">Run fastp for short-read data (complicated because PAIRED analysis)</h3>
+<pre><code>for file in /example/rawdata/directory/*.fastq.gz
+do
+    fname=$(basename "$file")
+    sample=${fname%_R1_001.fastq.gz}
+    
+    r1_file="/example/file/one.fastq.gz"
+    r2_file="/example/file/two.fastq.gz"
+    
+    if [[ -f "$r1_file" &amp;&amp; -f "$r2_file" ]]; then
+        echo "Processing sample: $sample"    
+        fastp \
+              --in1 "$r1_file" \
+              --in2 "$r2_file" \
+              --out1 "/example/output/one_clean.fastq.gz" \
+              --out2 "/example/output/two_clean.fastq.gz"  \
+              --unpaired1 example/one.unpaired.fastq \
+              --unpaired2 example/two.unpaired.fastq \
+              --failed_out /example/failedreads/$sample.fastq \
+              -q 30 -l 100 -n 2 -e 30 --cut_front --cut_tail -M 30 -W 1 \
+              --trim_poly_g \
+              --trim_poly_x \
+              --dont_eval_duplication \
+              --json "/example/report/${sample}_fastp.json" \
+              --html "/example/report/${sample}_fastp.html" \
+              --thread 8 \
+    else
+        echo "Warning: Missing R1 or R2 file for sample $sample"
+    fi
+done</code></pre>
+<p>in1 and in2 == input files out1 and out2 == output files unpaired 1/2 == reads that didn’t fit both in1 and in2 failed == couldn’t read -q (Phred q score) -l 100 == minimum length of read to be counted -n 2 == at MAX 2 N reads (unknown nucleotide) per read without being disgarded –cut_front / cut_tail == cut out first nucleotides/adapter -M 30 == cuts above only if phred score &gt; 30. -W 1 == reading window of one, reads one nucleotide at a time –trim_poly_g / trim_poly_x == trim out polyG/polyX tails that may occur –dont_eval_duplication == doesn’t look for duplications to save memory (This was already done in fastQC/MultiQC steps)</p>
+</section>
+<section id="rerun-fastqc-on-the-fastpfastplong-files-for-post-filtered-qc." class="level3">
+<h3 class="anchored" data-anchor-id="rerun-fastqc-on-the-fastpfastplong-files-for-post-filtered-qc.">rerun FastQC on the fastp/fastplong files for post-filtered QC.</h3>
+<p><em>Same code as prior just change the input/outputs</em></p>
+</section>
+<section id="run-multiqc-on-both-raw-and-filtered-outputs-separate-by-ont-and-illumina" class="level3">
+<h3 class="anchored" data-anchor-id="run-multiqc-on-both-raw-and-filtered-outputs-separate-by-ont-and-illumina">Run MultiQC on both raw and filtered outputs (separate by ONT and Illumina)</h3>
+<pre><code>multiqc -n illumina_multiqc -d /example/fastQC/fastp_data/
+multiqc -n nanopore_multiqc -d /example/fastQC/fastplong_data/</code></pre>
+<p>-n == the output files name -d == the input directory</p>
+</section>
+<section id="the-next-part-branches-into-two-aspects-de-novo-assembly-and-reference-based-assembly." class="level3">
+<h3 class="anchored" data-anchor-id="the-next-part-branches-into-two-aspects-de-novo-assembly-and-reference-based-assembly.">The next part branches into two aspects: de novo assembly and reference-based assembly.</h3>
+</section>
+<section id="to-perform-de-novo-assembly-of-genome-must-be-on-ont-data" class="level2">
+<h2 class="anchored" data-anchor-id="to-perform-de-novo-assembly-of-genome-must-be-on-ont-data">To perform De Novo Assembly of Genome (must be on ONT data)</h2>
+<p><em>use Flye program (install via conda/bioconda)</em></p>
+<pre><code>for file in /example/fastplong/data/*.fastq.gz
+do
+    fname=$(basename "$file")
+    
+    flye --nano-hq "$file" \
+        -g 12.3m \
+        -o "/scratch/gjandebeur/Cglabrata/flye/postfilter/${fname%}_nanopore.fastq" \
+        --threads 8
+done</code></pre>
+<p><em>Options for FLYE include: -g == genome size expected (~12.3m for C. glabrata) -o == output file –threads (how many CPU you have listed)</em></p>
+<section id="reference-based-assembly-minimap2" class="level3">
+<h3 class="anchored" data-anchor-id="reference-based-assembly-minimap2">Reference-Based Assembly (minimap2)</h3>
+<p><em>First for ONT data</em></p>
+<pre><code>#for file in /example/rawdata/*fastq.gz
+#do
+#    if [ -f "$file" ]; then
+#    fname=$(basename "$file" .fastq.gz)
+#    echo "Processing $fname..."
+#    
+#    ./minimap2 -ax map-ont \
+#    "/REFERENCE/FILE.fasta" \
+#    "$file" &gt; /output/ONT/${fname}.sam
+#    fi
+#      echo "minimap2 failed"
+#done</code></pre>
+<p>for above; -ax map-ont == uses ONT mapping to genome</p>
+<p>Next minimap2 for Illumina paired reads (different syntax)</p>
+<pre><code>#for file1 in "/example/file2/illumina/*_R1_001*.fastq.gz
+#do
+#    if [ -f "$file1" ]; then
+#        base="${file1%_R1_001*.fastq.gz}"
+#        base=$(basename "$base")
+#        file2="/example/file2/illumina/${base}_R2_001*.fastq.gz"
+#        file2=$(ls $file2 2&gt;/dev/null | head -1)
+#        if [ -f "$file2" ]; then
+#            echo "Processing paired files for sample: $base"
+#            echo "R1: $(basename $file1)"
+#            echo "R2: $(basename $file2)"
+#            ./minimap -ax sr \
+#            "/REFERENCE/FILE.fasta" \
+#            "$file1" "$file2" &gt; /output/illumina/${base}.sam
+#            echo "Generated: ${base}.sam"
+#        else
+#            echo "Warning: R2 file not found for $file1"
+#            echo "Expected: $file2"
+#        fi
+#        echo "---------------------------------------------"
+#    fi
+#done</code></pre>
+<p>for above; -ax sr === mapping using paired reads (illumina) both file1/file2 must be paired data (not just two similar files)</p>
+<section id="for-both-illumina-and-ont-data-run-the-following-on-the-output-to-convert-to-binary-.bam-file-and-sort.-additionally-the-following-command-will-run-samtools-flagstat-to-get-overall-statistical-data-on-how-well-mapping-occurred." class="level4">
+<h4 class="anchored" data-anchor-id="for-both-illumina-and-ont-data-run-the-following-on-the-output-to-convert-to-binary-.bam-file-and-sort.-additionally-the-following-command-will-run-samtools-flagstat-to-get-overall-statistical-data-on-how-well-mapping-occurred.">For both Illumina and ONT data, run the following on the output to convert to binary .BAM file and sort. Additionally, the following command will run samtools flagstat to get overall statistical data on how well mapping occurred.</h4>
+<pre><code>for file in /example/input/from/minimap2/*.sam
+do
+    fname=$(basename "$file" .sam)
+    bam="/example/output/filepath/bam/${fname}.bam"
+    echo "Converting $file to sorted BAM..."
+    
+    # Add temp directory and memory limit
+    samtools sort -T /example/temporarydirectory/forsorting/tmp/${fname} -m 2G -o "$bam" "$file" || { echo "Sort failed for $file"; continue; }
+    
+    samtools index "$bam"
+    samtools flagstat "$bam"
+    echo "Done with $fname."
+    echo "---------------------------------------------"
+done
+for file in /example/alldata/postfilter/*.bam
+do
+  samtools flagstat
+echo "----------------------------------------------------"
+
+done</code></pre>
+<p>After obtaining output files with the flagstat data, as well as from the Flye assembly, you can run the code attached to this directory to pull out statistical data and place into a .xlsx file for further analyses. <em>THESE TWO FILES MENTIONED ABOVE MUST BE RUN AS PYTHON SCRIPTS</em></p>
+<p>Now Run BCFtools to mpileup reads</p>
+<pre><code>ref_dir="/pathto/reference"
+bam_dir="/path/to/postfilter/ONT/bam"
+output_dir="/path/to/output/postfilter/bcfpileup/"  
+
+echo "Starting bcf mpileup loop"
+
+for bam_file in "$bam_dir"/*.bam
+do
+    if [ -f "$bam_file" ]; then
+        sample=$(basename "$bam_file" .bam)
+        output_file="$output_dir/${sample}.vcf.gz"
+        
+        # Skip if output file already exists
+        if [ -f "$output_file" ]; then
+            echo "Skipping $sample - output already exists: $output_file"
+            continue
+        fi
+        
+        echo "Processing sample: $sample"
+        echo "BAM file: $bam_file"
+        
+        bcftools mpileup \
+            --max-depth 1000000 \
+            --threads 8 \
+            -O z \
+            -o "$output_file" \
+            -f "$ref_dir/referencefile.fasta" \
+            "$bam_file"
+        
+        echo "Generated: ${sample}.vcf.gz"
+        echo "---------------------------------------------"
+    fi
+done
+echo "bcftools mpileup loop completed."</code></pre>
+<p>Using the pileup files, run bcftools call for SNP analysis</p>
 
 
+</section>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
