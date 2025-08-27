@@ -2,4 +2,4 @@
 title: "Gjandebeur's Github"
 ---
 
-Current PhD Student at OUHSC interested in computational biology and bioinformatics 
+Current PhD Student at OUHSC interested in computational biology and bioinformatics
