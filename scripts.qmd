@@ -10,12 +10,12 @@ format: html
 ::: {.card}
 **Old Workflow**  
 `Preprocessing on RNA002 (old) chemistry data using UNIX`  
-[View](old_workflow.qmd)
+[View](scripts/old_workflow.qmd)
 :::
 ::: {.card}
 **Genome Assembly**  
 `Bash script to assemble genome both De Novo & Reference-Based`  
-[View](genome_assembly.qmd)
+[View](scripts/genome_assembly.qmd)
 :::
 :::
 
