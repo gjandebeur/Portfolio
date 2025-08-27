@@ -1,1 +1,1 @@
-Sitemap: https://gjandebeur.github.io/test/sitemap.xml
+Sitemap: https://gjandebeur.github.io/Portfolio/sitemap.xml
