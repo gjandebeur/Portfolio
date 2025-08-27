@@ -3,6 +3,3 @@ title: "Gjandebeur's Github"
 ---
 
 Current PhD Student at OUHSC interested in computational biology and bioinformatics 
-
-Collection of Projects I've worked on. 
-

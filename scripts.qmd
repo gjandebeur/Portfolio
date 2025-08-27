@@ -9,12 +9,12 @@ format: html
 ::: {.card-grid}
 ::: {.card}
 **Old Workflow**  
-`R script for preprocessing`  
+`Preprocessing on RNA002 (old) \n chemistry data using UNIX`  
 [View](scripts/old_workflow.qmd)
 :::
 ::: {.card}
 **Genome Assembly**  
-`R script for assembly analysis`  
+`Bash script to assemble genome\n both De Novo & Reference-Based`  
 [View](scripts/genome_assembly.qmd)
 :::
 :::
