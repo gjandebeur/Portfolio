@@ -1,6 +1,8 @@
 ---
-title: "Jandebeur Github Page"
+title: "Gjandebeur's Github"
 ---
 
-This is a Quarto website.
+Current PhD Student at OUHSC interested in computational biology and bioinformatics 
+
+Collection of Projects I've worked on. 
 
