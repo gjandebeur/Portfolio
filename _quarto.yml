@@ -8,7 +8,7 @@ website:
       - href: index.qmd
         text: Home
       - href: scripts.qmd
-        text: scripts
+        text: Scripts
 
 format:
   html:
