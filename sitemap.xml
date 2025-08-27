@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gjandebeur.github.io/Portfolio/index.html</loc>
-    <lastmod>2025-08-27T20:38:06.758Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/Portfolio/about.html</loc>
-    <lastmod>2025-08-27T20:38:06.758Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/Portfolio/scripts/genome_assembly.html</loc>
-    <lastmod>2025-08-27T20:38:06.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/Portfolio/scripts/old_workflow.html</loc>
-    <lastmod>2025-08-27T20:38:06.759Z</lastmod>
+    <lastmod>2025-08-27T20:39:19.326Z</lastmod>
   </url>
   <url>
     <loc>https://gjandebeur.github.io/Portfolio/scripts.html</loc>
-    <lastmod>2025-08-27T20:38:06.758Z</lastmod>
+    <lastmod>2025-08-27T20:39:19.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/Portfolio/scripts/old_workflow.html</loc>
+    <lastmod>2025-08-27T20:39:19.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/Portfolio/scripts/genome_assembly.html</loc>
+    <lastmod>2025-08-27T20:39:19.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/Portfolio/about.html</loc>
+    <lastmod>2025-08-27T20:39:19.326Z</lastmod>
   </url>
 </urlset>
