@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "test"
+  title: "Gjandebeur Projects"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - scripts.qmd
+      - href: scripts.qmd
+        text: scripts
 
 format:
   html:

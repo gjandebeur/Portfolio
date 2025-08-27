@@ -1,5 +1,10 @@
 ---
-title: "Genome Assembly"
+title: "Scripts"
 ---
 
-Steps for genome assembly
+
+#Collection of scripts I've written:
+-[Script 1](C:/GPiBS/Rotation1/test/scripts/old_workflow.qmd)
+-[Script 2]()
+-[Script 3]()
+
