@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gjandebeur.github.io/test/index.html</loc>
-    <lastmod>2025-08-27T20:18:13.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/test/scripts.html</loc>
-    <lastmod>2025-08-27T20:18:13.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/test/scripts/old_workflow.html</loc>
-    <lastmod>2025-08-27T20:18:13.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gjandebeur.github.io/test/scripts/genome_assembly.html</loc>
-    <lastmod>2025-08-27T20:18:13.902Z</lastmod>
+    <lastmod>2025-08-27T20:18:54.231Z</lastmod>
   </url>
   <url>
     <loc>https://gjandebeur.github.io/test/about.html</loc>
-    <lastmod>2025-08-27T20:18:13.901Z</lastmod>
+    <lastmod>2025-08-27T20:18:54.231Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/test/scripts/genome_assembly.html</loc>
+    <lastmod>2025-08-27T20:18:54.231Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/test/scripts/old_workflow.html</loc>
+    <lastmod>2025-08-27T20:18:54.231Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gjandebeur.github.io/test/scripts.html</loc>
+    <lastmod>2025-08-27T20:18:54.231Z</lastmod>
   </url>
 </urlset>
