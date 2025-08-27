@@ -10,12 +10,13 @@ format: html
 ::: {.card}
 **Old Workflow**  
 `R script for preprocessing`  
-[View](scripts/old_workflow.qmd)
+[View](old_workflow.qmd)
 :::
 ::: {.card}
 **Genome Assembly**  
 `R script for assembly analysis`  
-[View](scripts/genome_assembly.qmd)
+[View](genome_assembly.qmd)
+:::
 :::
 
 
