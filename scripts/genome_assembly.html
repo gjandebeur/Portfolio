@@ -126,6 +126,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#reference-based-assembly-minimap2" id="toc-reference-based-assembly-minimap2" class="nav-link" data-scroll-target="#reference-based-assembly-minimap2">Reference-Based Assembly (minimap2)</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#minimap2-for-illumina-paired-reads-different-syntax" id="toc-minimap2-for-illumina-paired-reads-different-syntax" class="nav-link" data-scroll-target="#minimap2-for-illumina-paired-reads-different-syntax">minimap2 for Illumina paired reads (different syntax)</a></li>
+  <li><a href="#run-bcftools-to-mpileup-reads" id="toc-run-bcftools-to-mpileup-reads" class="nav-link" data-scroll-target="#run-bcftools-to-mpileup-reads">Run BCFtools to mpileup reads</a>
+  <ul class="collapse">
+  <li><a href="#bcftools-call" id="toc-bcftools-call" class="nav-link" data-scroll-target="#bcftools-call">BCFtools call</a></li>
+  <li><a href="#using-the-pileup-files-run-bcftools-call-for-snp-analysis" id="toc-using-the-pileup-files-run-bcftools-call-for-snp-analysis" class="nav-link" data-scroll-target="#using-the-pileup-files-run-bcftools-call-for-snp-analysis">Using the pileup files, run bcftools call for SNP analysis</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -258,7 +264,11 @@ done</code></pre>
 #      echo "minimap2 failed"
 #done</code></pre>
 <p>for above; -ax map-ont == uses ONT mapping to genome</p>
-<p>Next minimap2 for Illumina paired reads (different syntax)</p>
+</section>
+</section>
+</section>
+<section id="minimap2-for-illumina-paired-reads-different-syntax" class="level1">
+<h1>minimap2 for Illumina paired reads (different syntax)</h1>
 <pre><code>#for file1 in "/example/file2/illumina/*_R1_001*.fastq.gz
 #do
 #    if [ -f "$file1" ]; then
@@ -305,7 +315,10 @@ echo "----------------------------------------------------"
 
 done</code></pre>
 <p>After obtaining output files with the flagstat data, as well as from the Flye assembly, you can run the code attached to this directory to pull out statistical data and place into a .xlsx file for further analyses. <em>THESE TWO FILES MENTIONED ABOVE MUST BE RUN AS PYTHON SCRIPTS</em></p>
-<p>Now Run BCFtools to mpileup reads</p>
+</section>
+</section>
+<section id="run-bcftools-to-mpileup-reads" class="level1">
+<h1>Run BCFtools to mpileup reads</h1>
 <pre><code>ref_dir="/pathto/reference"
 bam_dir="/path/to/postfilter/ONT/bam"
 output_dir="/path/to/output/postfilter/bcfpileup/"  
@@ -340,11 +353,38 @@ do
     fi
 done
 echo "bcftools mpileup loop completed."</code></pre>
-<p>Using the pileup files, run bcftools call for SNP analysis</p>
+<section id="bcftools-call" class="level3">
+<h3 class="anchored" data-anchor-id="bcftools-call">BCFtools call</h3>
+</section>
+<section id="using-the-pileup-files-run-bcftools-call-for-snp-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-pileup-files-run-bcftools-call-for-snp-analysis">Using the pileup files, run bcftools call for SNP analysis</h2>
+<pre><code>vcf_dir="/path/to/bcfpileup/"
+output_dir="/output/path/bcfreport"
+#
+for vcf_file in "$vcf_dir"/*.vcf.gz
+do
+    if [ -f "$vcf_file" ]; then
+        sample=$(basename "$vcf_file" .vcf.gz)
+        output_file="$output_dir/final_variants_${sample}.vcf.gz"
+
+        # Skip if output file already exists
+        if [ -f "$output_file" ]; then
+            echo "Skipping $sample - output already exists: $output_file"
+            continue
+        fi
+
+        echo "Processing sample: $sample"
+        bcftools call \
+            --threads 8 \
+            --ploidy 1 \ #this is for haploid, may need to change it!
+            -mv \
+            -O z \
+            -o "$output_file" "$vcf_file"
+    fi
+done</code></pre>
+<p>echo “script complete”</p>
 
 
-</section>
-</section>
 </section>
 </section>
 
