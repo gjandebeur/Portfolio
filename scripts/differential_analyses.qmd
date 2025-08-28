@@ -1,0 +1,187 @@
+---
+title: "differential_analyses"
+format: html
+---
+
+# Differential Expression and Modification Script
+library(txdbmaker)
+library(GenomicFeatures)
+
+txdb <- makeTxDbFromGFF("reference.gtf")
+
+k <- keys(txdb, keytype = "TXNAME")  # make sure keytype exists
+tx2gene <- AnnotationDbi::select(txdb, keys = k, columns = "GENEID", keytype = "TXNAME")
+
+library(tidyverse)
+metadata <- read_delim("path/to/metadata.txt", delim = ",",
+                       escape_double = FALSE, trim_ws = TRUE)
+
+#setwd("salmondata") 
+files <- paste0(metadata$sample, "/quant.sf")
+names(files) <- metadata$sample
+
+# Verify files exist
+file.exists(files)
+
+
+library(tximport)
+txi <- tximport(files, type = "salmon", tx2gene = tx2gene, txOut = F, ignoreAfterBar = T)
+
+txi$counts |> head()
+
+
+library(DESeq2)
+metadata$individual <- as.factor(metadata$individual)
+
+#  prepare deseq object
+dds <- DESeqDataSetFromTximport(txi = txi, colData = metadata, 
+                                design = ~individual + condition)
+
+dds <- DESeq(dds, parallel = T)
+
+
+# non batch corrected PCA
+vsd <- rlog(dds, blind = F)
+pca_data <- plotPCA(vsd, intgroup = c("condition", "individual"), returnData = TRUE)
+percentVar <- round(100 * attr(pca_data, "percentVar"))
+library(cowplot)
+ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = individual)) +
+  geom_point(size = 3) +
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  ggtitle("Principal Component Analysis") +
+ # scale_color_manual(values = c("black", "gray65", "darkblue", "cadetblue3", "springgreen4", "springgreen2")) +
+  theme(aspect.ratio = 1) +
+  theme_cowplot(24) 
+# stat_ellipse(aes(group = Condition), type = "t", level = 0.65)
+
+# ggsave(plot = last_plot(),
+#        "save/here.png",
+#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+
+
+
+# Batch corrected PCA creation
+
+vsd <- rlog(dds, blind = F)
+assay(vsd) <- limma::removeBatchEffect(assay(vsd), vsd$individual)
+pca_data <- plotPCA(vsd, intgroup = c("condition", "sample"), returnData = TRUE)
+percentVar <- round(100 * attr(pca_data, "percentVar"))
+
+# Custom PCA plot
+ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = sample)) +
+  geom_point(size = 6) +
+  xlab(paste0("PC1: ", percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ", percentVar[2], "% variance")) +
+  ggtitle("Principal Component Analysis") +
+  theme(aspect.ratio = 1) +
+  theme_cowplot(24) +
+  stat_ellipse(type = "t", level = 0.95)
+
+#ggsave(plot = last_plot(),
+#        "save/here.png",
+#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+# # )
+
+# Creation of Differential Expression Volcano Plot
+
+# gene id symbol mapping
+library(org.Hs.eg.db)
+
+mapping <- AnnotationDbi::select(org.Hs.eg.db, keys = keys(org.Hs.eg.db),
+                                 columns = c("GENENAME", "ENSEMBL", "SYMBOL", "REFSEQ"))
+
+
+library(biomaRt)
+mart <- useMart("ensembl", dataset="hsapiens_gene_ensembl")
+
+# biomaRt can sometimes handle versioned IDs directly
+listAttributes(mart) ->atts
+
+mapping <- getBM(attributes=c("ensembl_gene_id", "ensembl_gene_id_version", "external_gene_name",
+                              "description"),
+                 filters="ensembl_gene_id_version",
+               values=tx2gene$GENEID,
+                 mart=mart)
+
+
+
+# get differential eaxpression results data frame
+res_df <- results(dds, contrast = c("condition", "other_condition", "ctrl"), tidy = T)
+
+res_df_ann <- res_df %>%
+  left_join(., mapping, by = c("row" = "ensembl_gene_id_version"))
+
+
+library(EnhancedVolcano)
+EnhancedVolcano(res_df_ann,
+                lab = res_df_ann$external_gene_name,
+                x = 'log2FoldChange',
+                y = 'padj',
+                pointSize = 2
+                )
+                
+# Differential Modification Workflow
+
+
+```
+site_counts <- filtered_genes %>%
+  group_by(experiment, gene_id_clean, mod) %>%
+  summarise(n_sites = n(), .groups = "drop") %>%
+  left_join(mapped_reads, by = "experiment") %>%
+  mutate(norm_sites = (n_sites / mapped) * 1e6) %>% 
+  mutate(
+    group = case_when(
+      str_detect(experiment, "6|18|20") ~ "condition",
+      str_detect(experiment, "24|32|36") ~ "control_condition",
+      TRUE ~ "other"
+    ),
+    replicate_group = case_when(
+      str_detect(experiment, "1") ~ "control",
+      str_detect(experiment, "2") ~ "variable",
+      TRUE ~ "unknown"
+    )
+  )
+```
+summary_stats <- site_counts %>%
+  group_by(gene_id_clean, mod, group, replicate_group) %>%
+  summarise(
+    mean_norm_sites = mean(norm_sites, na.rm = TRUE),
+    sd_norm_sites = sd(norm_sites, na.rm = TRUE),
+    n_replicates = n_distinct(experiment),
+    .groups = "drop"
+  )
+
+#
+
+
+Gene_of_interest <- summary_stats_named %>%
+  filter(gene_symbol == "Gene_of_interest") %>%
+  mutate(
+    replicate_exposure = case_when(
+      group == "condition" & replicate_group == "control" ~ "Control – Smokers",
+      group == "condition" & replicate_group == "CSE-exposed" ~ "CSE – Smokers",
+      group == "control" & replicate_group == "control" ~ "Control – Nonsmokers",
+      group == "control" & replicate_group == "CSE-exposed" ~ "CSE – Nonsmokers",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  drop_na(replicate_exposure)
+
+
+#
+ggplot(top5_m6a_df, aes(x = gene_symbol, y = mean_norm_sites, fill = replicate_exposure)) +
+  geom_col(position = position_dodge(width = 0.8), color = "black", width = 0.7) +
+  scale_fill_manual(values = group_colors) +
+  labs(
+    title = "Coverage Normalized m6A Sites by Gene",
+    x = "",
+    y = "Normalized Sites (per million mapped reads)",
+    fill = "Condition"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(size = 12, face = "bold"),
+    legend.position = "bottom",
+    plot.title = element_text(size = 14, face = "bold")
+  )

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>Modkit_Apptainer – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -89,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#installation-of-modkit-onto-oscer-uses-singularityapptainer-for-dependency-issues" id="toc-installation-of-modkit-onto-oscer-uses-singularityapptainer-for-dependency-issues" class="nav-link active" data-scroll-target="#installation-of-modkit-onto-oscer-uses-singularityapptainer-for-dependency-issues">Installation of Modkit onto OSCER (uses singularity/apptainer) for dependency issues</a></li>
   </ul>
 </nav>
     </div>
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">Modkit_Apptainer</h1>
 </div>
 
 
@@ -138,41 +138,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="installation-of-modkit-onto-oscer-uses-singularityapptainer-for-dependency-issues" class="level1">
+<h1>Installation of Modkit onto OSCER (uses singularity/apptainer) for dependency issues</h1>
+<p>workflow for running modkit on OSCER. Uses singularity/apptainer to update up to glibc2.18 so that modkit can run.</p>
+<p>Heres the path to the modkit installation,</p>
+<p>“/ourdisk/hpc/rnafold/gjandebeur/dont_archive/software/modkit_v0.5/dist_modkit_v0.5.0_5120ef7/modkit”</p>
+<p><strong>In order to run on OSCER you’ll need to create a container for glibc2.18 by copying the following.</strong> <em>No clue how to explain what this does but you should be able to copy directly to create the image needed to run modkit</em></p>
+<pre><code>mkdir -p /scratch/$USER/apptainer_images
+apptainer pull /scratch/$USER/apptainer_images/ubuntu20.sif docker://ubuntu:20.04 
+export APPTAINER_CACHEDIR=/scratch/$USER/apptainer_cache
+export APPTAINER_TMPDIR=/scratch/$USER/apptainer_tmp 
+mkdir -p $APPTAINER_CACHEDIR $APPTAINER_TMPDIR</code></pre>
+<p>After this, you will bind the apptainer image that was just created in your scratch directory to the modkit download path above by doing the following, which will allow modkit to run without the glibc version mismatch. You can change the paths but /mnt/ must be first to make sure it’s pulling through the apptainer.</p>
+<pre><code>    apptainer exec --bind /ourdisk:/mnt /scratch/gjandebeur/apptainer_images/ubuntu20.sif \ </code></pre>
+<p>/mnt/hpc/rnafold/gjandebeur/dont_archive/software/modkit_v0.5/dist_modkit_v0.5.0_5120ef7/modkit<br>
+pileup &nbsp; –mod-thresholds a:0.99 –mod-thresholds m:0.99 –mod-thresholds 17802:0.99 –mod-thresholds 17596:0.99<br>
+/mnt/hpc/rnafold/path/to/rawdata/aligned.bam<br>
+/mnt/hpc/rnafold/path/to/rawdata/pileup.bed</p>
+<p><em>for reference, a = m6A. m = m5C. 17802 = pseU. &amp; 17596 = inosine_m6A</em></p>
 
 
 </section>

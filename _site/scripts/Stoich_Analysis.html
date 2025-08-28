@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>Stoich_Analysis – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -89,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -112,7 +112,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#script-to-view-stoichiometry-useful-for-downstream-comparisons" id="toc-script-to-view-stoichiometry-useful-for-downstream-comparisons" class="nav-link active" data-scroll-target="#script-to-view-stoichiometry-useful-for-downstream-comparisons">Script to view stoichiometry (useful for downstream comparisons)</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">dependencies</a></li>
+  <li><a href="#load-in-the-final-filtered-data-file-from-preprocessing-script." id="toc-load-in-the-final-filtered-data-file-from-preprocessing-script." class="nav-link" data-scroll-target="#load-in-the-final-filtered-data-file-from-preprocessing-script.">load in the final filtered data file from preprocessing script.</a></li>
+  <li><a href="#need-the-percent-modified-or-n_mod-and-n_cov-to-determine-stoich" id="toc-need-the-percent-modified-or-n_mod-and-n_cov-to-determine-stoich" class="nav-link" data-scroll-target="#need-the-percent-modified-or-n_mod-and-n_cov-to-determine-stoich">need the percent modified or n_mod and n_cov to determine stoich</a></li>
+  <li><a href="#fixing-for-reproducibility" id="toc-fixing-for-reproducibility" class="nav-link" data-scroll-target="#fixing-for-reproducibility">fixing for reproducibility</a>
+  <ul class="collapse">
+  <li><a href="#percent-modified-should-be-present-but-if-not-here-is-calc-for-site-level-stoich" id="toc-percent-modified-should-be-present-but-if-not-here-is-calc-for-site-level-stoich" class="nav-link" data-scroll-target="#percent-modified-should-be-present-but-if-not-here-is-calc-for-site-level-stoich">percent modified should be present but if not here is calc for site-level stoich</a></li>
+  </ul></li>
+  <li><a href="#basic-graph" id="toc-basic-graph" class="nav-link" data-scroll-target="#basic-graph">basic graph</a></li>
+  <li><a href="#histogram-of-site-level-stoich-combines-all-samples" id="toc-histogram-of-site-level-stoich-combines-all-samples" class="nav-link" data-scroll-target="#histogram-of-site-level-stoich-combines-all-samples">histogram of site level stoich, combines all samples</a></li>
   </ul>
 </nav>
     </div>
@@ -121,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">Stoich_Analysis</h1>
 </div>
 
 
@@ -138,41 +147,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="script-to-view-stoichiometry-useful-for-downstream-comparisons" class="level3">
+<h3 class="anchored" data-anchor-id="script-to-view-stoichiometry-useful-for-downstream-comparisons">Script to view stoichiometry (useful for downstream comparisons)</h3>
+</section>
+<section id="dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="dependencies">dependencies</h3>
+<p>library(tidyverse) library(ggpubr)<br>
+library(viridis)</p>
+</section>
+<section id="load-in-the-final-filtered-data-file-from-preprocessing-script." class="level3">
+<h3 class="anchored" data-anchor-id="load-in-the-final-filtered-data-file-from-preprocessing-script.">load in the final filtered data file from preprocessing script.</h3>
+</section>
+<section id="need-the-percent-modified-or-n_mod-and-n_cov-to-determine-stoich" class="level3">
+<h3 class="anchored" data-anchor-id="need-the-percent-modified-or-n_mod-and-n_cov-to-determine-stoich">need the percent modified or n_mod and n_cov to determine stoich</h3>
+<p>filtered_mod_file &lt;- “path/to/filtered_mod_data.csv”</p>
+</section>
+<section id="fixing-for-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="fixing-for-reproducibility">fixing for reproducibility</h2>
+<p>filtered_mods &lt;- readr::read_csv(filtered_mod_file) %&gt;% mutate(gene_id = str_remove(gene_id, “^gene:”))</p>
+<section id="percent-modified-should-be-present-but-if-not-here-is-calc-for-site-level-stoich" class="level3">
+<h3 class="anchored" data-anchor-id="percent-modified-should-be-present-but-if-not-here-is-calc-for-site-level-stoich">percent modified should be present but if not here is calc for site-level stoich</h3>
+<p>native_stoich &lt;- native_filtered %&gt;% select(position, n_valid_cov, n_mod_reads, GENEID, mod, experiment) %&gt;% mutate( stoich = n_mod_reads / n_valid_cov, GENEID = str_remove(GENEID, “^gene:”) )</p>
+<section id="section" class="level22">
+<p class="heading"></p>
+</section>
+</section>
+</section>
+<section id="basic-graph" class="level2">
+<h2 class="anchored" data-anchor-id="basic-graph">basic graph</h2>
+</section>
+<section id="histogram-of-site-level-stoich-combines-all-samples" class="level2">
+<h2 class="anchored" data-anchor-id="histogram-of-site-level-stoich-combines-all-samples">histogram of site level stoich, combines all samples</h2>
+<p>ggplot(native_stoich, aes(x = stoich)) + geom_histogram(bins = 40, fill = “steelblue”, color = “black”) + labs( title = “Stoichiometry Distribution”, x = “Stoichiometry”, y = “Count” ) + theme_minimal()</p>
 
 
 </section>

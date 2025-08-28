@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>motif_analysis – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +67,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -89,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -112,7 +141,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#investigation-of-motif-for-each-samplespecies" id="toc-investigation-of-motif-for-each-samplespecies" class="nav-link active" data-scroll-target="#investigation-of-motif-for-each-samplespecies">investigation of motif for each sample/species</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">dependencies</a></li>
+  <li><a href="#prevents-scientific-notation-in-graph" id="toc-prevents-scientific-notation-in-graph" class="nav-link" data-scroll-target="#prevents-scientific-notation-in-graph">prevents scientific notation in graph</a></li>
+  <li><a href="#producing-updated-bedfiles" id="toc-producing-updated-bedfiles" class="nav-link" data-scroll-target="#producing-updated-bedfiles">producing updated bedfiles</a></li>
+  <li><a href="#change-code-from-17802-pseu-to-a-m6a-if-preferred" id="toc-change-code-from-17802-pseu-to-a-m6a-if-preferred" class="nav-link" data-scroll-target="#change-code-from-17802-pseu-to-a-m6a-if-preferred">change code from 17802 (pseU) to a (m6A) if preferred</a></li>
+  <li><a href="#following-this-is-1-small-important-step.-can-use-meme-for-motif-analyses-or" id="toc-following-this-is-1-small-important-step.-can-use-meme-for-motif-analyses-or" class="nav-link" data-scroll-target="#following-this-is-1-small-important-step.-can-use-meme-for-motif-analyses-or">FOLLOWING THIS IS 1 SMALL IMPORTANT STEP. Can use MEME for motif analyses OR</a></li>
+  <li><a href="#use-a-unix-ssh-to-run-bedtools-intersect-with-the-updated-fasta-reference-file-to-generate-bed2fasta-files-.fasta" id="toc-use-a-unix-ssh-to-run-bedtools-intersect-with-the-updated-fasta-reference-file-to-generate-bed2fasta-files-.fasta" class="nav-link" data-scroll-target="#use-a-unix-ssh-to-run-bedtools-intersect-with-the-updated-fasta-reference-file-to-generate-bed2fasta-files-.fasta">Use a UNIX SSH to run bedtools intersect with the updated fasta reference file to generate bed2fasta files (.fasta)</a></li>
+  <li><a href="#after-producing-fasta-files-in-a-seperate-ssh-that-is-unix-rather-than-r." id="toc-after-producing-fasta-files-in-a-seperate-ssh-that-is-unix-rather-than-r." class="nav-link" data-scroll-target="#after-producing-fasta-files-in-a-seperate-ssh-that-is-unix-rather-than-r.">after producing fasta files in a seperate SSH that is UNIX rather than R.</a>
+  <ul class="collapse">
+  <li><a href="#small-filtering-for-the-files-above" id="toc-small-filtering-for-the-files-above" class="nav-link" data-scroll-target="#small-filtering-for-the-files-above">small filtering for the files above</a></li>
+  <li><a href="#view-which-motifs-are-shared-between-the-two-quality-control-step" id="toc-view-which-motifs-are-shared-between-the-two-quality-control-step" class="nav-link" data-scroll-target="#view-which-motifs-are-shared-between-the-two-quality-control-step">view which motifs are shared between the two (quality control step)</a></li>
+  <li><a href="#count-unique-motifs-and-their-percent-of-total-motif" id="toc-count-unique-motifs-and-their-percent-of-total-motif" class="nav-link" data-scroll-target="#count-unique-motifs-and-their-percent-of-total-motif">count unique motifs and their percent of total motif</a></li>
+  <li><a href="#combine-into-1-dataset" id="toc-combine-into-1-dataset" class="nav-link" data-scroll-target="#combine-into-1-dataset">combine into 1 dataset</a></li>
+  <li><a href="#limits-to-top-25-motifs-can-change-n-to-any-number" id="toc-limits-to-top-25-motifs-can-change-n-to-any-number" class="nav-link" data-scroll-target="#limits-to-top-25-motifs-can-change-n-to-any-number">limits to top 25 motifs, can change n= to any number</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -121,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">motif_analysis</h1>
 </div>
 
 
@@ -138,43 +181,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="investigation-of-motif-for-each-samplespecies" class="level3">
+<h3 class="anchored" data-anchor-id="investigation-of-motif-for-each-samplespecies">investigation of motif for each sample/species</h3>
+</section>
+<section id="dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="dependencies">dependencies</h3>
+<p>library(stringr) library(dplyr) library(ggplot2)</p>
+</section>
+<section id="prevents-scientific-notation-in-graph" class="level3">
+<h3 class="anchored" data-anchor-id="prevents-scientific-notation-in-graph">prevents scientific notation in graph</h3>
+<p>options(scipen=999)</p>
+</section>
+<section id="producing-updated-bedfiles" class="level3">
+<h3 class="anchored" data-anchor-id="producing-updated-bedfiles">producing updated bedfiles</h3>
+</section>
+<section id="change-code-from-17802-pseu-to-a-m6a-if-preferred" class="level3">
+<h3 class="anchored" data-anchor-id="change-code-from-17802-pseu-to-a-m6a-if-preferred">change code from 17802 (pseU) to a (m6A) if preferred</h3>
+<p>native_filtered %&gt;% filter(code == “17802”) %&gt;% select(chrom, start, end, code, n_valid_cov, strand) %&gt;% distinct(chrom, start, end, .keep_all = TRUE) %&gt;% arrange(chrom, start) %&gt;% mutate( start = start - 3, end = end + 3 ) %&gt;% write.table( “./for_motif/at_pseU_3pad.bed”, col.names = FALSE, row.names = FALSE, sep = “, quote = FALSE )</p>
+<section id="this-is-ivt-motif-samples-that-are-not-found-in-the-native-replicates" class="level4">
+<h4 class="anchored" data-anchor-id="this-is-ivt-motif-samples-that-are-not-found-in-the-native-replicates">this is IVT motif samples that are NOT found in the native replicates</h4>
+<p>ivt_antifiltered %&gt;% filter(code == “17802”) %&gt;% select(chrom, start, end, code, n_valid_cov, strand) %&gt;% distinct(chrom, start, end, .keep_all = TRUE) %&gt;% arrange(chrom, start) %&gt;% mutate( start = start - 3, end = end + 3 ) %&gt;% write.table( “./for_motif/at_pseU_IVT_3pad.bed”, col.names = FALSE, row.names = FALSE, sep = “, quote = FALSE )</p>
+</section>
+</section>
+<section id="following-this-is-1-small-important-step.-can-use-meme-for-motif-analyses-or" class="level3">
+<h3 class="anchored" data-anchor-id="following-this-is-1-small-important-step.-can-use-meme-for-motif-analyses-or">FOLLOWING THIS IS 1 SMALL IMPORTANT STEP. Can use MEME for motif analyses OR</h3>
+</section>
+<section id="use-a-unix-ssh-to-run-bedtools-intersect-with-the-updated-fasta-reference-file-to-generate-bed2fasta-files-.fasta" class="level3">
+<h3 class="anchored" data-anchor-id="use-a-unix-ssh-to-run-bedtools-intersect-with-the-updated-fasta-reference-file-to-generate-bed2fasta-files-.fasta">Use a UNIX SSH to run bedtools intersect with the updated fasta reference file to generate bed2fasta files (.fasta)</h3>
+</section>
+<section id="after-producing-fasta-files-in-a-seperate-ssh-that-is-unix-rather-than-r." class="level1">
+<h1>after producing fasta files in a seperate SSH that is UNIX rather than R.</h1>
+<p>#read the files created, change pseU for m6A if needed</p>
+<p>lines &lt;- readLines(“./for_motif/at_pseU_3pad.fa”) IVT_lines &lt;- readLines(“./for_motif/at_pseU_IVT_3pad.fa”)</p>
+<section id="small-filtering-for-the-files-above" class="level3">
+<h3 class="anchored" data-anchor-id="small-filtering-for-the-files-above">small filtering for the files above</h3>
+<p>stopifnot(length(lines) %% 2 == 0) stopifnot(length(IVT_lines) %% 2 == 0)</p>
+<p>headers &lt;- lines[seq(1, length(lines), by = 2)] motifs &lt;- lines[seq(2, length(lines), by = 2)]</p>
+<p>IVT_headers &lt;- IVT_lines[seq(1, length(IVT_lines), by = 2)] IVT_motifs &lt;- IVT_lines[seq(2, length(IVT_lines), by = 2)]</p>
+<p>parsed &lt;- str_match(headers, “^&gt;([^:]+):(\d+)-(\d+)\(([+-])\)”) IVT_parsed &lt;- str_match(IVT_headers, “^&gt;([^:]+):(\d+)-(\d+)\(([+-])\)”)</p>
+<section id="now-transform-into-df-for-graphing." class="level4">
+<h4 class="anchored" data-anchor-id="now-transform-into-df-for-graphing.">now transform into df for graphing.</h4>
+<p>at_pseU_3pad &lt;- data.frame( chrom = paste0(“chr”, parsed[, 2]), start = as.integer(parsed[, 3]), end = as.integer(parsed[, 4]), strand = parsed[, 5], motif = motifs, stringsAsFactors = FALSE )</p>
+<p>at_pseU_IVT_3pad &lt;- data.frame( chrom = paste0(“chr”, IVT_parsed[, 2]), start = as.integer(IVT_parsed[, 3]), end = as.integer(IVT_parsed[, 4]), strand = IVT_parsed[, 5], motif = IVT_motifs, stringsAsFactors = FALSE )</p>
+</section>
+<section id="collapse-down-to-5mer-uses-7mer-at-first-for-safety-but-ont-pores-are-5mers" class="level4">
+<h4 class="anchored" data-anchor-id="collapse-down-to-5mer-uses-7mer-at-first-for-safety-but-ont-pores-are-5mers">collapse down to 5mer (uses 7mer at first for safety, but ONT pores are 5mers)</h4>
+<p>at_pseU_2pad &lt;- at_pseU_3pad %&gt;% mutate( start = start + 1, end = end - 1, motif = substr(motif, 2, nchar(motif) - 1) )</p>
+<p>at_pseU_IVT_2pad &lt;- at_pseU_IVT_3pad %&gt;% mutate( start = start + 1, end = end - 1, motif = substr(motif, 2, nchar(motif) - 1) )</p>
+</section>
+</section>
+<section id="view-which-motifs-are-shared-between-the-two-quality-control-step" class="level3">
+<h3 class="anchored" data-anchor-id="view-which-motifs-are-shared-between-the-two-quality-control-step">view which motifs are shared between the two (quality control step)</h3>
+<p>shared_motifs &lt;- intersect( unique(at_pseU_2pad<span class="math inline">\(motif),
+  unique(at_pseU_IVT_2pad\)</span>motif) )</p>
+<p>at_pseU_2pad_shared &lt;- at_pseU_2pad %&gt;% filter(motif %in% shared_motifs)</p>
+<p>at_pseU_IVT_2pad_shared &lt;- at_pseU_IVT_2pad %&gt;% filter(motif %in% shared_motifs)</p>
+</section>
+<section id="count-unique-motifs-and-their-percent-of-total-motif" class="level3">
+<h3 class="anchored" data-anchor-id="count-unique-motifs-and-their-percent-of-total-motif">count unique motifs and their percent of total motif</h3>
+<p>motif_ranked_top25 &lt;- at_pseU_2pad %&gt;% group_by(motif) %&gt;% summarise(count = n()) %&gt;% mutate( dataset = “Arabidopsis”, percent = count / sum(count) * 100 )</p>
+<p>IVT_motif_ranked_top25 &lt;- at_pseU_IVT_2pad %&gt;% group_by(motif) %&gt;% summarise(count = n()) %&gt;% mutate( dataset = “IVT”, percent = count / sum(count) * 100 )</p>
+</section>
+<section id="combine-into-1-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="combine-into-1-dataset">combine into 1 dataset</h3>
+<p>combined_motifs &lt;- bind_rows( motif_ranked_top25 %&gt;% select(motif, percent, dataset), IVT_motif_ranked_top25 %&gt;% select(motif, percent, dataset) )</p>
+</section>
+<section id="limits-to-top-25-motifs-can-change-n-to-any-number" class="level3">
+<h3 class="anchored" data-anchor-id="limits-to-top-25-motifs-can-change-n-to-any-number">limits to top 25 motifs, can change n= to any number</h3>
+<p>top_motifs &lt;- combined_motifs %&gt;% group_by(motif) %&gt;% summarise(avg_percent = mean(percent)) %&gt;% arrange(desc(avg_percent)) %&gt;% slice_head(n = 25) %&gt;% pull(motif)</p>
+<section id="example-graph-to-produce-to-show-these-motifs" class="level5">
+<h5 class="anchored" data-anchor-id="example-graph-to-produce-to-show-these-motifs">example graph to produce to show these motifs</h5>
+<p>combined_motifs %&gt;% filter(motif %in% top_motifs) %&gt;% mutate(motif = factor(motif, levels = rev(top_motifs))) %&gt;% ggplot(aes(x = percent, y = motif, fill = dataset)) + geom_col(position = position_dodge(width = 0.8)) + labs( title = “Top 25 pseU 5-mer Motif Frequencies (Normalized)”, x = “Percent of Total Sites”, y = “Motif” ) + theme_minimal() + theme( plot.title = element_text(size = 14, face = “bold”), axis.text.y = element_text(size = 10), legend.position = “top” )</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

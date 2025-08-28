@@ -25,10 +25,28 @@ format: html
 ::: {.card}
 **Substitution Plot** 
 `Bash & R scripts to produce accuracy of basecaller plot`  
-[View Main Script](scripts/Accuracy_Substitution_Plot.qmd) | [View Helper Script](scripts/Substitutionplot.qmd)
+[View Unix Script](scripts/Accuracy_Substitution_Plot.qmd) | [View R Script](scripts/Substitutionplot.qmd)
+:::
+:::{.card}
+**Modkit Installation**
+'Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses'
+[View](scripts/Modkit_Apptainer.qmd)
+:::
+:::{.card}
+**Helpful R Scripts for Analysis**
+'Downstream analysis options from pA, exon length, stoich, and etc'
+[View polyA Length](scripts/pA_analysis.qmd) |
+[View motif analysis](scripts/motif_analysis.qmd) |
+[View Exon Length](scripts/exon_length.qmd) |
+[View Stoichiometry](scripts/Stoich_Analysis.qmd) |
+[View GO Analysis](scripts/GO_analysis.qmd)
+:::
+:::{.card}
+**Differential Expression and Modification**
+'Script to perform Differential Expression, Modification, and PCA plot'
+[View](scripts/differential_analyses.qmd)
 :::
 :::
-
 
 
 <!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
