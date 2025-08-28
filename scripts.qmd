@@ -28,6 +28,7 @@ format: html
 `Bash & R scripts to produce accuracy of basecaller plot`  
 [View Main Script](scripts/Accuracy_Substitution_Plot.qmd) | [View Helper Script](scripts/Substitutionplot.qmd)
 :::
+:::
 
 
 <!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
