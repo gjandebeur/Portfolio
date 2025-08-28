@@ -13,10 +13,20 @@ format: html
 [View](scripts/old_workflow.qmd)
 :::
 ::: {.card}
+**Modkit Analysis**  
+`R script for modkit analysis pipeline`  
+[View](scripts/Modkit_Analysis_dRNAseq.qmd)
+:::
+::: {.card}
 **Genome Assembly**  
 `Bash script to assemble genome both De Novo & Reference-Based`  
 [View](scripts/genome_assembly.qmd)
 :::
+::: {.card}
+**Substitution Plot** 
+![](hbec_IVT_substitutionplot.png)
+`Bash & R scripts to produce accuracy of basecaller plot`  
+[View Main Script](scripts/Accuracy_Substitution_Plot.qmd) | [View Helper Script](scripts/Substitutionplot.qmd)
 :::
 
 

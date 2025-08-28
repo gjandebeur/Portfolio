@@ -1,0 +1,110 @@
+---
+title: "Accuracy_Substitution_Plot"
+format: html
+---
+
+# Substitutionplot
+Full Pipeline to produce a plot showing accuracy of basecaller reads compared to reference.
+
+*Creates the following graph*
+<img width="600" height="450" alt="hbec_IVT_substitutionplot" src="https://github.com/user-attachments/assets/040ca5fd-af92-4217-b5e6-5d25caed607d" />
+
+
+
+
+Uses multiple programs, will show full input/output to get to the graph
+
+
+First, run Dorado on the pod5/fast5 raw reads to produce a sam file 
+
+```
+./dorado \
+basecaller \
+--models-directory /directory/to_location_of/dorado-1.0.1-linux-x64/rna004_130bps_sup@v5.2.0/ \
+sup,inosine_m6A_2OmeA,2OmeG,m5C_2OmeC,pseU_2OmeU \ #this will investigate all 8 mods currently available as of Dorado 1.0.1
+--min-qscore 10 \ #min score removes bottom 90% of reads
+--emit-moves \ #doesn't keep the eventalign files (unneeded and saves LOTS of space/memory)
+--estimate-poly-a \ #adds polyA information to file for downstream processing
+-r "/inputfile/location/pod5/" \
+> "/example/output/*_basecalled.bam"
+```
+
+Use this output to align to genome using Minimap2
+
+```
+samples=("list samples here")
+
+# Paths
+minimap2="/path/to/minimap2
+ref="/reference/file/*.transcripts.fa"
+rawdir="/path/to/rawdata"
+procdir="/output/directory/for/processed_data/"
+
+# Loop over each sample
+for sample in "${samples[@]}"; do
+    echo "Processing $sample..."
+
+    fastq="${rawdir}/${sample}_8mod_basecalled.fastq"
+    sam="${rawdir}/${sample}_8mod_aligned_splice.sam"   #splice because we use -ax splice instead of -ax map-ont (seems to slightly improve the accuracy)
+    bam="${procdir}/${sample}_8mod_aligned_sortedsplice.bam"
+
+    # Align with minimap2
+    "$minimap2" -ax splice -uf -k14 -y --secondary=no "$ref" "$fastq" > "$sam"
+
+    # Convert to sorted BAM
+    samtools sort -o "$bam" "$sam"
+
+    # Get alignment stats
+    samtools flagstat "$bam"
+
+    echo "Done with $sample."
+    echo "---------------------------------------------"
+done
+```
+Important options \n
+-ax splice == spliced mapping [better for RNA] \n
+-uf -k14 == best options for noisy mRNA reads \n
+--secondary==no == removes secondary reads 
+
+### Next is MarginAlign/MarginStats, run on Python2.7.15 (old old), to find these statistical values
+
+first you must "uniquify" the fastq, removing any duplicate reads 
+```
+"/path/to/marginAlign/scripts/uniquifyFastq" \
+"/input/nonprocessed/*.fastq" \
+"/processed/output/*uniquify.fastq"
+```
+
+*Use the uniquify output to run marginStats*
+
+```
+"/path/to/marginalign/marginStats" \
+--localAlignment "/path/to/prev/output.bam" \
+"/path/to/the/uniquified/file/.fastq" \
+"/reference/file.fa" \
+--readIdentity \
+--alignmentIdentity \
+--readCoverage \
+--readLength \
+--printValuePerReadAlignment > "/output/testoutput.txt"
+```
+
+To run the plot script, we must convert .txt into .tsv and convert all T into U to represent Uracil in RNA (current BAM files only can use T (thymine))
+
+```
+sed 's/  */\t/g' "/sample/output.txt" > "/sample/output.tsv"
+sed 's/T/U/g'  "/sample/output.tsv" > "/sample/output_subU.tsv" 
+```
+# BEFORE RUNNING THE RSCRIPT
+*the tsv output from above has 4 lines of stats that you must remove for the plot to work. I have no clue why it adds these here but it will throw errors if not removed.
+
+```
+tail -n +5 "/sample/output_subU.tsv" > "/sample/output_subU_cleaned.tsv" 
+```
+Using the below formatting, run the script in files as an R script to create the graph (this is currently set up for SLURM on UNIX to run Rscript).
+-The substitutionplot.R script 
+```
+Rscript substitutionplot.R \
+"/sample/output_subU_cleaned.tsv" "/output/substitutionplot.tiff" \
+"Substitution Matrix for reproducibility" #title of graph
+```
