@@ -24,7 +24,6 @@ format: html
 :::
 ::: {.card}
 **Substitution Plot** 
-![](hbec_IVT_substitutionplot.png)
 `Bash & R scripts to produce accuracy of basecaller plot`  
 [View Main Script](scripts/Accuracy_Substitution_Plot.qmd) | [View Helper Script](scripts/Substitutionplot.qmd)
 :::
