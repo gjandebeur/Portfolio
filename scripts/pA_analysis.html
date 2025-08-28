@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>pA_analysis – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -113,7 +113,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#script-to-visualize-poly-a-tail-lengths" id="toc-script-to-visualize-poly-a-tail-lengths" class="nav-link active" data-scroll-target="#script-to-visualize-poly-a-tail-lengths">script to visualize poly-A tail lengths</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies">dependencies</a>
+  <ul class="collapse">
+  <li><a href="#load-in-pa-tail-lengths-for-each-sample" id="toc-load-in-pa-tail-lengths-for-each-sample" class="nav-link" data-scroll-target="#load-in-pa-tail-lengths-for-each-sample">load in pA tail lengths for each sample</a></li>
+  </ul></li>
+  <li><a href="#seperating-pa-length-into-3-categories-seperated-by-q1-q1-q3-and-q3-as-short-medium-and-long" id="toc-seperating-pa-length-into-3-categories-seperated-by-q1-q1-q3-and-q3-as-short-medium-and-long" class="nav-link" data-scroll-target="#seperating-pa-length-into-3-categories-seperated-by-q1-q1-q3-and-q3-as-short-medium-and-long">seperating pA length into 3 categories, seperated by &lt;Q1 , Q1-Q3, and &gt;Q3 as “short”, “medium”, and “long”</a></li>
+  <li><a href="#combine-the-two-files-for-graphing-and-join-by-gene_id-important" id="toc-combine-the-two-files-for-graphing-and-join-by-gene_id-important" class="nav-link" data-scroll-target="#combine-the-two-files-for-graphing-and-join-by-gene_id-important">combine the two files for graphing and join by gene_id (important)</a>
+  <ul class="collapse">
+  <li><a href="#basic-distribution-of-pa-lengths" id="toc-basic-distribution-of-pa-lengths" class="nav-link" data-scroll-target="#basic-distribution-of-pa-lengths">basic distribution of pA lengths</a></li>
+  <li><a href="#and-graph-distributions-of-mod-to-pa-length-can-change-y-axis-to-other-columns-as-well" id="toc-and-graph-distributions-of-mod-to-pa-length-can-change-y-axis-to-other-columns-as-well" class="nav-link" data-scroll-target="#and-graph-distributions-of-mod-to-pa-length-can-change-y-axis-to-other-columns-as-well">and graph distributions of % mod to pA length, can change y axis to other columns as well</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -122,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">pA_analysis</h1>
 </div>
 
 
@@ -139,43 +149,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="script-to-visualize-poly-a-tail-lengths" class="level3">
+<h3 class="anchored" data-anchor-id="script-to-visualize-poly-a-tail-lengths">script to visualize poly-A tail lengths</h3>
+</section>
+<section id="dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="dependencies">dependencies</h2>
+<p>suppressPackageStartupMessages({ library(data.table) library(tidyverse) library(tidytable) library(ggplot2) library(stringr) library(dplyr) })</p>
+<section id="load-in-pa-tail-lengths-for-each-sample" class="level3">
+<h3 class="anchored" data-anchor-id="load-in-pa-tail-lengths-for-each-sample">load in pA tail lengths for each sample</h3>
+<p>polyA_data &lt;- readr::read_tsv(“data/polyA_tail_lengths.tsv”) %&gt;% rename( tail_length = <tail_length_column>, # &lt;– Replace with actual column name gene_annotation = <annotation_column> # &lt;– if gene info is embedded here ) %&gt;% mutate( gene_id = str_extract(gene_annotation, ‘gene_id “gene:[^"]+’) %&gt;% str_replace(’gene_id”gene:’, ““) ) %&gt;% filter(!is.na(tail_length), !is.na(gene_id))</annotation_column></tail_length_column></p>
+<section id="load-the-final-filtered-data-from-the-library-preprocessing-script." class="level4">
+<h4 class="anchored" data-anchor-id="load-the-final-filtered-data-from-the-library-preprocessing-script.">load the final filtered data from the library preprocessing script.</h4>
+<p>final_filtered_data &lt;- readr::read_csv(“data/final_filtered_data.csv”)</p>
+</section>
+</section>
+</section>
+<section id="seperating-pa-length-into-3-categories-seperated-by-q1-q1-q3-and-q3-as-short-medium-and-long" class="level2">
+<h2 class="anchored" data-anchor-id="seperating-pa-length-into-3-categories-seperated-by-q1-q1-q3-and-q3-as-short-medium-and-long">seperating pA length into 3 categories, seperated by &lt;Q1 , Q1-Q3, and &gt;Q3 as “short”, “medium”, and “long”</h2>
+<p>gene_level_tails &lt;- polyA_data %&gt;% group_by(gene_id) %&gt;% summarise( mean_tail_length = mean(tail_length, na.rm = TRUE), median_tail_length = median(tail_length, na.rm = TRUE), .groups = “drop” ) %&gt;% mutate( tail_length_group = case_when( mean_tail_length &lt;= quantile(mean_tail_length, 0.25, na.rm = TRUE) ~ “short”, mean_tail_length &gt;= quantile(mean_tail_length, 0.75, na.rm = TRUE) ~ “long”, TRUE ~ “medium” ) )</p>
+</section>
+<section id="combine-the-two-files-for-graphing-and-join-by-gene_id-important" class="level2">
+<h2 class="anchored" data-anchor-id="combine-the-two-files-for-graphing-and-join-by-gene_id-important">combine the two files for graphing and join by gene_id (important)</h2>
+<p>mod_with_tail &lt;- filtered_mods %&gt;% left_join(gene_level_tails %&gt;% select(gene_id, tail_length_group), by = “gene_id”) %&gt;% filter(!is.na(tail_length_group))</p>
+<section id="basic-distribution-of-pa-lengths" class="level3">
+<h3 class="anchored" data-anchor-id="basic-distribution-of-pa-lengths">basic distribution of pA lengths</h3>
+<p>ggplot(gene_level_tails, aes(x = mean_tail_length)) + geom_histogram(binwidth = 5, fill = “steelblue”, color = “black”) + theme_minimal() + labs(title = “Distribution of Mean PolyA Tail Lengths (Per Gene)”, x = “Mean PolyA Tail Length (nt)”, y = “Gene Count”)</p>
+</section>
+<section id="and-graph-distributions-of-mod-to-pa-length-can-change-y-axis-to-other-columns-as-well" class="level3">
+<h3 class="anchored" data-anchor-id="and-graph-distributions-of-mod-to-pa-length-can-change-y-axis-to-other-columns-as-well">and graph distributions of % mod to pA length, can change y axis to other columns as well</h3>
+<p>ggplot(mod_with_tail, aes(x = tail_length_group, y = avg_percent_modified, fill = tail_length_group)) + geom_violin(trim = FALSE, alpha = 0.8, color = NA) + geom_boxplot(width = 0.1, outlier.shape = NA, fill = “white”, color = “gray20”, alpha = 0.5) + facet_wrap(~ mod, scales = “free_y”) + theme_minimal(base_size = 13) + labs( title = “% Modified by PolyA Tail Length Group”, x = “PolyA Tail Length Group”, y = “Average % Modified” ) + scale_fill_brewer(palette = “Set2”) + theme(legend.position = “none”)</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

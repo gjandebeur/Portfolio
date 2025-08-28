@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>GO_analysis – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,8 +68,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -90,11 +119,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -113,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#load-in-past-library-prep-file" id="toc-load-in-past-library-prep-file" class="nav-link active" data-scroll-target="#load-in-past-library-prep-file">Load in past library prep file</a></li>
   </ul>
 </nav>
     </div>
@@ -122,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">GO_analysis</h1>
 </div>
 
 
@@ -139,43 +168,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="load-dependencies" class="level9">
+<p class="heading">load dependencies</p>
+</section>
+<section id="section" class="level6">
+<h6 class="anchored" data-anchor-id="section"></h6>
+<p>library(clusterProfiler) library(enrichplot) library(stringr) library(dplyr) #######################</p>
+</section>
+<section id="load-in-past-library-prep-file" class="level1">
+<h1>Load in past library prep file</h1>
+<p>native_filtered &lt;- fread(“../data/native_filtered_clean.csv”, row.names = F)</p>
+<section id="section-1" class="level4">
+<h4 class="anchored" data-anchor-id="section-1"></h4>
+<p>mod_gene_data &lt;- native_filtered %&gt;% mutate( gene_id = str_remove(GENEID, “^gene:”), mod = str_trim(mod) ) %&gt;% select(gene_id, mod, experiment) %&gt;% distinct() %&gt;% as.data.frame()</p>
+<p>mod_gene_list &lt;- mod_gene_data %&gt;% group_by(mod) %&gt;% summarise(genes = list(unique(gene_id))) %&gt;% as.data.frame()</p>
+<p>mod_gene_list_named &lt;- setNames(mod_gene_list<span class="math inline">\(genes, mod_gene_list\)</span>mod) ############################################</p>
+<p>#begin enrichment code</p>
+<p>ego &lt;- compareCluster( geneCluster = mod_gene_list_named, fun = “enricher”, universe = background$gene, pvalueCutoff = 0.05, TERM2GENE = goterms )</p>
+<p>hyper_ego &lt;- mutate(ego@compareClusterResult, FoldEnrichment = parse_ratio(GeneRatio) / parse_ratio(BgRatio))</p>
+<section id="section-2" class="level45">
+<p class="heading"></p>
+<p>#some potential graphs to help visualize #bubble plot</p>
+<p>library(ggplot2) library(cowplot)</p>
+<p>ggplot(ego, aes(x = Cluster, y = Description)) + geom_point(aes(size = Count, color = p.adjust)) + scale_color_gradient(low = “forestgreen”, high = “darkviolet”, name = “Adj p-value”) + theme_cowplot() + labs( title = “Ratio of GO Enrichment by Modification”, x = “Modification”, y = “GO Term”, size = “Gene Count” )</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

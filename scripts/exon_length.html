@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Scripts – Gjandebeur Projects</title>
+<title>exon_length – Gjandebeur Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Gjandebeur Projects</span>
     </a>
   </div>
@@ -90,11 +90,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./scripts.html" aria-current="page"> 
+    <a class="nav-link" href="../scripts.html"> 
 <span class="menu-text">Scripts</span></a>
   </li>  
 </ul>
@@ -113,7 +113,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#collection-of-scripts-ive-written" id="toc-collection-of-scripts-ive-written" class="nav-link active" data-scroll-target="#collection-of-scripts-ive-written">Collection of scripts I’ve written:</a></li>
+  <li><a href="#determining-exon-lengths-in-methylated-vs-unmethylated-samples" id="toc-determining-exon-lengths-in-methylated-vs-unmethylated-samples" class="nav-link active" data-scroll-target="#determining-exon-lengths-in-methylated-vs-unmethylated-samples">determining exon lengths in methylated vs unmethylated samples</a></li>
+  <li><a href="#load-in-txdb-change-to-your-gtf-for-species-studied" id="toc-load-in-txdb-change-to-your-gtf-for-species-studied" class="nav-link" data-scroll-target="#load-in-txdb-change-to-your-gtf-for-species-studied">load in txdb (change to your gtf for species studied)</a></li>
+  <li><a href="#extract-exon-length-from-txdb-file" id="toc-extract-exon-length-from-txdb-file" class="nav-link" data-scroll-target="#extract-exon-length-from-txdb-file">extract exon length from txdb file</a></li>
+  <li><a href="#isolate-m6a-sites-from-native_filtered-produced-in-libraryprep_analyses.r" id="toc-isolate-m6a-sites-from-native_filtered-produced-in-libraryprep_analyses.r" class="nav-link" data-scroll-target="#isolate-m6a-sites-from-native_filtered-produced-in-libraryprep_analyses.r">isolate m6A sites from native_filtered (produced in libraryprep_analyses.R)</a></li>
+  <li><a href="#determine-which-transcripts-are-methylated-or-unmethylated" id="toc-determine-which-transcripts-are-methylated-or-unmethylated" class="nav-link" data-scroll-target="#determine-which-transcripts-are-methylated-or-unmethylated">determine which transcripts are methylated or unmethylated</a></li>
+  <li><a href="#identify-unmethylated-exons-exons-without-any-m6a-sites" id="toc-identify-unmethylated-exons-exons-without-any-m6a-sites" class="nav-link" data-scroll-target="#identify-unmethylated-exons-exons-without-any-m6a-sites">Identify unmethylated exons (exons without any m6A sites)</a></li>
   </ul>
 </nav>
     </div>
@@ -122,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scripts</h1>
+<h1 class="title">exon_length</h1>
 </div>
 
 
@@ -139,43 +144,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="collection-of-scripts-ive-written" class="level1">
-<h1>Collection of scripts I’ve written:</h1>
-<div class="card-grid">
-<div class="card">
-<p><strong>Old Workflow</strong><br>
-<code>Preprocessing on RNA002 (old) chemistry data using UNIX</code><br>
-<a href="./scripts/old_workflow.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Analysis</strong><br>
-<code>R script for modkit analysis pipeline</code><br>
-<a href="./scripts/Modkit_Analysis_dRNAseq.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Genome Assembly</strong><br>
-<code>Bash script to assemble genome both De Novo &amp; Reference-Based</code><br>
-<a href="./scripts/genome_assembly.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Substitution Plot</strong> <code>Bash &amp; R scripts to produce accuracy of basecaller plot</code><br>
-<a href="./scripts/Accuracy_Substitution_Plot.html">View Unix Script</a> | <a href="./scripts/Substitutionplot.html">View R Script</a></p>
-</div>
-<div class="card">
-<p><strong>Modkit Installation</strong> ‘Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses’ <a href="./scripts/Modkit_Apptainer.html">View</a></p>
-</div>
-<div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> ‘Downstream analysis options from pA, exon length, stoich, and etc’ <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
-</div>
-<div class="card">
-<p><strong>Differential Expression and Modification</strong> ‘Script to perform Differential Expression, Modification, and PCA plot’ <a href="./scripts/differential_analyses.html">View</a></p>
-</div>
-</div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+<section id="determining-exon-lengths-in-methylated-vs-unmethylated-samples" class="level3">
+<h3 class="anchored" data-anchor-id="determining-exon-lengths-in-methylated-vs-unmethylated-samples">determining exon lengths in methylated vs unmethylated samples</h3>
+<section id="dependencies" class="level4">
+<h4 class="anchored" data-anchor-id="dependencies">dependencies</h4>
+<p>library(GenomicFeatures) library(dplyr) library(stringr) library(ggplot2)</p>
+</section>
+</section>
+<section id="load-in-txdb-change-to-your-gtf-for-species-studied" class="level3">
+<h3 class="anchored" data-anchor-id="load-in-txdb-change-to-your-gtf-for-species-studied">load in txdb (change to your gtf for species studied)</h3>
+<p>txdb &lt;- makeTxDbFromGFF(“../data/at_ensembl_plants.gtf”)</p>
+</section>
+<section id="extract-exon-length-from-txdb-file" class="level3">
+<h3 class="anchored" data-anchor-id="extract-exon-length-from-txdb-file">extract exon length from txdb file</h3>
+<p>exons_df &lt;- exons(txdb, columns = c(“EXONID”, “TXNAME”, “GENEID”)) %&gt;% as.data.frame() exons_df_clean &lt;- exons_df %&gt;% rename( chrom = seqnames, exon_start = start, exon_end = end ) %&gt;% mutate( exon_length = exon_end - exon_start + 1, GENEID = str_remove(GENEID, “^gene:”) )</p>
+</section>
+<section id="isolate-m6a-sites-from-native_filtered-produced-in-libraryprep_analyses.r" class="level3">
+<h3 class="anchored" data-anchor-id="isolate-m6a-sites-from-native_filtered-produced-in-libraryprep_analyses.r">isolate m6A sites from native_filtered (produced in libraryprep_analyses.R)</h3>
+<p>m6A_sites &lt;- native_filtered %&gt;% filter(mod == “m6A”) %&gt;% mutate(GENEID = str_remove(GENEID, “^gene:”)) %&gt;% select(GENEID, m6a_pos = start)</p>
+<section id="section" class="level37">
+<p class="heading"></p>
+</section>
+</section>
+<section id="determine-which-transcripts-are-methylated-or-unmethylated" class="level1">
+<h1>determine which transcripts are methylated or unmethylated</h1>
+<p>methylated_exons &lt;- exons_df_clean %&gt;% inner_join(m6A_sites, by = “GENEID”) %&gt;% filter(m6a_pos &gt;= exon_start &amp; m6a_pos &lt;= exon_end) %&gt;% distinct(chrom, exon_start, exon_end, GENEID, .keep_all = TRUE)</p>
+</section>
+<section id="identify-unmethylated-exons-exons-without-any-m6a-sites" class="level1">
+<h1>Identify unmethylated exons (exons without any m6A sites)</h1>
+<p>unmethylated_exons &lt;- anti_join( exons_df_clean, methylated_exons, by = c(“chrom”, “exon_start”, “exon_end”, “GENEID”) )</p>
+<section id="section-1" class="level47">
+<p class="heading"></p>
+<p>#produce one combined length file with both meth/unmeth lengths</p>
+<p>length_df &lt;- bind_rows( methylated_exons %&gt;% select(exon_length) %&gt;% mutate(type = “methylated”), unmethylated_exons %&gt;% select(exon_length) %&gt;% mutate(type = “unmethylated”) )</p>
+</section>
+<section id="example-plot-to-view-the-difference-in-length-violin-boxplot" class="level4">
+<h4 class="anchored" data-anchor-id="example-plot-to-view-the-difference-in-length-violin-boxplot">example plot to view the difference in length (violin &amp; boxplot)</h4>
+<p>ggplot(length_df, aes(x = type, y = exon_length, fill = type)) + geom_violin(trim = FALSE, alpha = 0.7) + geom_boxplot(width = 0.1, outlier.shape = NA, fill = “white”) + labs( title = “Exon Lengths: m6A Methylated vs Unmethylated”, x = NULL, y = “Exon Length (nt)” ) + scale_fill_manual(values = c(methylated = “darkgreen”, unmethylated = “maroon”)) + coord_cartesian(ylim = c(0, 2000)) + theme_minimal()</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
