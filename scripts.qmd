@@ -29,12 +29,12 @@ format: html
 :::
 :::{.card}
 **Modkit Installation**
-'Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses'
+`Using singularity/apptainer to install modkit onto OSCER for up-to-date analyses`
 [View](scripts/Modkit_Apptainer.qmd)
 :::
 :::{.card}
 **Helpful R Scripts for Analysis**
-'Downstream analysis options from pA, exon length, stoich, and etc'
+`Downstream analysis options from pA, exon length, stoich, and etc`
 [View polyA Length](scripts/pA_analysis.qmd) |
 [View motif analysis](scripts/motif_analysis.qmd) |
 [View Exon Length](scripts/exon_length.qmd) |
@@ -43,7 +43,7 @@ format: html
 :::
 :::{.card}
 **Differential Expression and Modification**
-'Script to perform Differential Expression, Modification, and PCA plot'
+`Script to perform Differential Expression, Modification, and PCA plot`
 [View](scripts/differential_analyses.qmd)
 :::
 :::
