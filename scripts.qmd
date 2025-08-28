@@ -37,10 +37,10 @@ onto OSCER for up-to-date analyses`
 **Helpful R Scripts for Analysis**
 `Downstream analysis options from 
 pA, exon length, stoich, and etc`
-[View polyA Length](scripts/pA_analysis.qmd) | \n
-[View motif analysis](scripts/motif_analysis.qmd) | \n
-[View Exon Length](scripts/exon_length.qmd) | \n
-[View Stoichiometry](scripts/Stoich_Analysis.qmd) | \n
+[View polyA Length](scripts/pA_analysis.qmd) |
+[View motif analysis](scripts/motif_analysis.qmd) |
+[View Exon Length](scripts/exon_length.qmd) |
+[View Stoichiometry](scripts/Stoich_Analysis.qmd) |
 [View GO Analysis](scripts/GO_analysis.qmd)
 :::
 :::{.card}
