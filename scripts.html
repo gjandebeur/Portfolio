@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-category',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-category',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -206,309 +206,201 @@ window.Quarto = {
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="YmFzaCUyQ3BpcGVsaW5lJTJDcm5hMDAy" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="13" data-listing-word-count-sort="2499">
-<a href="./scripts/old_workflow.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-old_workflow
-</h5>
-<div class="card-text listing-description delink">
-<p>Full pipeline for RNA002 data (old chemistry)</p>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<table class="card-other-values">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
 
-<tbody><tr>
-<td>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Description
+</th>
+
+<th>
 category
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="UiUyQ3BvbHktQSUyQ3RhaWwlMkNybmEwMDQ=" data-listing-file-modified-sort="1756494046591" data-listing-reading-time-sort="3" data-listing-word-count-sort="406" data-listing-title-sort="pA_analysis" data-listing-filename-sort="pA_analysis.qmd">
+<td>
+<a href="./scripts/pA_analysis.html" class="title listing-title">pA_analysis</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Statistical Analysis for Poly-A Tail Lengths</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="YmFzaCUyQ3N0b2ljaGlvbWV0cnklMkNtb2RpZmljYXRpb25zJTJDcm5hMDA0" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<a href="./scripts/Stoich_Analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Stoich_Analysis
-</h5>
-<div class="card-text listing-description delink">
-<p>Stiochiometry of Modifications for RNA-Seq</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="1" data-categories="YmFzaCUyQ3BpcGVsaW5lJTJDcm5hMDAy" data-listing-file-modified-sort="1756494046591" data-listing-reading-time-sort="13" data-listing-word-count-sort="2499" data-listing-title-sort="old_workflow" data-listing-filename-sort="old_workflow.qmd">
 <td>
-category
+<a href="./scripts/old_workflow.html" class="title listing-title">old_workflow</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Full pipeline for RNA002 data (old chemistry)</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="5" data-listing-word-count-sort="948">
-<a href="./scripts/Modkit_Analysis_dRNAseq.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Modkit_Analysis_dRNAseq
-</h5>
-<div class="card-text listing-description delink">
-Workflow for analyses of m6A Modifications Post Modkit Filtering
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="2" data-categories="UiUyQ21vdGlmJTJDbW9ka2l0JTJDcm5hMDA0" data-listing-file-modified-sort="1756494046591" data-listing-reading-time-sort="4" data-listing-word-count-sort="703" data-listing-title-sort="motif_analysis" data-listing-filename-sort="motif_analysis.qmd">
 <td>
-category
+<a href="./scripts/motif_analysis.html" class="title listing-title">motif_analysis</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Determination of Motif using Modkit Output</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="UiUyQ21vdGlmJTJDbW9ka2l0JTJDcm5hMDA0" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
-<a href="./scripts/motif_analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-motif_analysis
-</h5>
-<div class="card-text listing-description delink">
-<p>Determination of Motif using Modkit Output</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="3" data-categories="YmFzaCUyQ2dlbm9tZSUyQ2Fzc2VtYmx5JTJDcm5hMDA0" data-listing-file-modified-sort="1756494046591" data-listing-reading-time-sort="9" data-listing-word-count-sort="1777" data-listing-title-sort="genome_assembly" data-listing-filename-sort="genome_assembly.qmd">
 <td>
-category
+<a href="./scripts/genome_assembly.html" class="title listing-title">genome_assembly</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">De Novo and Reference-Based Alignment &amp; Genome Assembly</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="YmFzaCUyQ2dlbm9tZSUyQ2Fzc2VtYmx5JTJDcm5hMDA0" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="9" data-listing-word-count-sort="1777">
-<a href="./scripts/genome_assembly.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-genome_assembly
-</h5>
-<div class="card-text listing-description delink">
-<p>De Novo and Reference-Based Alignment &amp; Genome Assembly</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="4" data-categories="YmFzaCUyQ2V4b24lMkNtb2R0eXBlJTJDcm5hMDA0" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="2" data-listing-word-count-sort="271" data-listing-title-sort="exon_length" data-listing-filename-sort="exon_length.qmd">
 <td>
-category
+<a href="./scripts/exon_length.html" class="title listing-title">exon_length</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Script to determine exon lengths for bulk RNA-seq data</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="UiUyQ3BvbHktQSUyQ3RhaWwlMkNybmEwMDQ=" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
-<a href="./scripts/pA_analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-pA_analysis
-</h5>
-<div class="card-text listing-description delink">
-<p>Statistical Analysis for Poly-A Tail Lengths</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="5" data-categories="YmFzaCUyQ1IlMkNkaWZmZXJlbnRpYWwlMkNleHByZXNzaW9uJTJDbW9kaWZpY2F0aW9u" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="5" data-listing-word-count-sort="995" data-listing-title-sort="differential_analyses" data-listing-filename-sort="differential_analyses.qmd">
 <td>
-category
+<a href="./scripts/differential_analyses.html" class="title listing-title">differential_analyses</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Workflow for both Diff. Expression and Modification, including PCA and Volcano plot</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="UiUyQ2FjY3VyYWN5JTJDcm5hMDA0" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
-<a href="./scripts/Substitutionplot.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Substitutionplot
-</h5>
-<div class="card-text listing-description delink">
-<p>R script to create substitution plot</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="6" data-categories="UiUyQ2FjY3VyYWN5JTJDcm5hMDA0" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="1" data-listing-word-count-sort="168" data-listing-title-sort="Substitutionplot" data-listing-filename-sort="Substitutionplot.qmd">
 <td>
-category
+<a href="./scripts/Substitutionplot.html" class="title listing-title">Substitutionplot</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">R script to create substitution plot</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="YmFzaCUyQ2V4b24lMkNtb2R0eXBlJTJDcm5hMDA0" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="2" data-listing-word-count-sort="271">
-<a href="./scripts/exon_length.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-exon_length
-</h5>
-<div class="card-text listing-description delink">
-<p>Script to determine exon lengths for bulk RNA-seq data</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="7" data-categories="YmFzaCUyQ3N0b2ljaGlvbWV0cnklMkNtb2RpZmljYXRpb25zJTJDcm5hMDA0" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-title-sort="Stoich_Analysis" data-listing-filename-sort="Stoich_Analysis.qmd">
 <td>
-category
+<a href="./scripts/Stoich_Analysis.html" class="title listing-title">Stoich_Analysis</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Stiochiometry of Modifications for RNA-Seq</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="YmFzaCUyQ2FjY3VyYWN5JTJDcm5hMDA0" data-listing-file-modified-sort="1756493690458" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
-<a href="./scripts/Accuracy_Substitution_Plot.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Accuracy_Substitution_Plot
-</h5>
-<div class="card-text listing-description delink">
-<p>Library prep for Substitution Plot</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="8" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="1" data-listing-word-count-sort="195" data-listing-title-sort="Modkit_Apptainer" data-listing-filename-sort="Modkit_Apptainer.qmd">
 <td>
-category
+<a href="./scripts/Modkit_Apptainer.html" class="title listing-title">Modkit_Apptainer</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">workflow for running modkit on OSCER. Uses singularity/apptainer to update up to glibc2.18 so that modkit can run.</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<a href="./scripts/Modkit_Apptainer.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Modkit_Apptainer
-</h5>
-<div class="card-text listing-description delink">
-workflow for running modkit on OSCER. Uses singularity/apptainer to update up to glibc2.18 so that modkit can run.
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="9" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="Modkit_Analysis_dRNAseq" data-listing-filename-sort="Modkit_Analysis_dRNAseq.qmd">
 <td>
-category
+<a href="./scripts/Modkit_Analysis_dRNAseq.html" class="title listing-title">Modkit_Analysis_dRNAseq</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Workflow for analyses of m6A Modifications Post Modkit Filtering</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="YmFzaCUyQ1IlMkNkaWZmZXJlbnRpYWwlMkNleHByZXNzaW9uJTJDbW9kaWZpY2F0aW9u" data-listing-file-modified-sort="1756493690459" data-listing-reading-time-sort="5" data-listing-word-count-sort="995">
-<a href="./scripts/differential_analyses.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-differential_analyses
-</h5>
-<div class="card-text listing-description delink">
-<p>Workflow for both Diff. Expression and Modification, including PCA and Volcano plot</p>
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="10" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="1" data-listing-word-count-sort="180" data-listing-title-sort="GO_analysis" data-listing-filename-sort="GO_analysis.qmd">
 <td>
-category
+<a href="./scripts/GO_analysis.html" class="title listing-title">GO_analysis</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">load dependencies</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1756493690458" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
-<a href="./scripts/GO_analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-GO_analysis
-</h5>
-<div class="card-text listing-description delink">
-load dependencies
-</div>
-<table class="card-other-values">
-
-<tbody><tr>
+<tr data-index="11" data-categories="YmFzaCUyQ2FjY3VyYWN5JTJDcm5hMDA0" data-listing-file-modified-sort="1756494046590" data-listing-reading-time-sort="3" data-listing-word-count-sort="406" data-listing-title-sort="Accuracy_Substitution_Plot" data-listing-filename-sort="Accuracy_Substitution_Plot.qmd">
 <td>
-category
+<a href="./scripts/Accuracy_Substitution_Plot.html" class="title listing-title">Accuracy_Substitution_Plot</a>
 </td>
-<td class="category">
-&nbsp;
+<td>
+<span class="listing-description">Library prep for Substitution Plot</span>
 </td>
+<td>
+<span class="listing-category">&nbsp;</span>
+</td>
+
 </tr>
 
-</tbody></table>
-</div>
-</div></a>
-</div>
-</div>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
