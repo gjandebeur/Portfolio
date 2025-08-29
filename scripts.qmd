@@ -1,8 +1,12 @@
 ---
 title: "Scripts"
+listing: default 
 format: html
+listing:
+  contents: scripts
+  sort: "date"
+  fields: [image, date, title]
 ---
-
 
 # Collection of scripts I've written:
 
@@ -38,6 +42,7 @@ onto OSCER for up-to-date analyses`
 `Downstream analysis options from 
 pA, exon length, stoich, and etc`
 [View polyA Length](scripts/pA_analysis.qmd) |
+
 [View motif analysis](scripts/motif_analysis.qmd) |
 [View Exon Length](scripts/exon_length.qmd) |
 [View Stoichiometry](scripts/Stoich_Analysis.qmd) |
