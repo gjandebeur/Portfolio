@@ -1,11 +1,12 @@
 ---
 title: "Scripts"
-listing: default 
 format: html
 listing:
   contents: scripts
-  sort: "date"
-  fields: [image, date, title]
+  sort: "date desc"
+  type: "grid"
+  fields: [image, date, title, description]
+  grid-columns: 3
 ---
 
 # Collection of scripts I've written:
@@ -55,7 +56,3 @@ pA, exon length, stoich, and etc`
 :::
 :::
 
-
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->

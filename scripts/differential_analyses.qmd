@@ -4,6 +4,7 @@ format: html
 ---
 
 # Differential Expression and Modification Script
+```
 library(txdbmaker)
 library(GenomicFeatures)
 
@@ -28,8 +29,10 @@ library(tximport)
 txi <- tximport(files, type = "salmon", tx2gene = tx2gene, txOut = F, ignoreAfterBar = T)
 
 txi$counts |> head()
+```
+### Prep the DE dataset
 
-
+```
 library(DESeq2)
 metadata$individual <- as.factor(metadata$individual)
 
@@ -55,14 +58,15 @@ ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = individual)) +
   theme_cowplot(24) 
 # stat_ellipse(aes(group = Condition), type = "t", level = 0.65)
 
-# ggsave(plot = last_plot(),
-#        "save/here.png",
-#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+  ggsave(plot = last_plot(),
+        "save/here.png",
+        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+```
 
 
+## Batch corrected PCA creation
 
-# Batch corrected PCA creation
-
+```
 vsd <- rlog(dds, blind = F)
 assay(vsd) <- limma::removeBatchEffect(assay(vsd), vsd$individual)
 pca_data <- plotPCA(vsd, intgroup = c("condition", "sample"), returnData = TRUE)
@@ -78,13 +82,15 @@ ggplot(pca_data, aes(x = PC1, y = PC2, color = condition, shape = sample)) +
   theme_cowplot(24) +
   stat_ellipse(type = "t", level = 0.95)
 
-#ggsave(plot = last_plot(),
-#        "save/here.png",
-#        width = 12, height = 9, units = "in", dpi =300, bg = "white")
+ggsave(plot = last_plot(),
+        "save/here.png",
+         width = 12, height = 9, units = "in", dpi =300, bg = "white")
 # # )
+``` 
 
 # Creation of Differential Expression Volcano Plot
 
+```
 # gene id symbol mapping
 library(org.Hs.eg.db)
 
@@ -111,8 +117,9 @@ res_df <- results(dds, contrast = c("condition", "other_condition", "ctrl"), tid
 
 res_df_ann <- res_df %>%
   left_join(., mapping, by = c("row" = "ensembl_gene_id_version"))
+```
 
-
+```
 library(EnhancedVolcano)
 EnhancedVolcano(res_df_ann,
                 lab = res_df_ann$external_gene_name,
@@ -120,9 +127,9 @@ EnhancedVolcano(res_df_ann,
                 y = 'padj',
                 pointSize = 2
                 )
-                
-# Differential Modification Workflow
+```
 
+# Differential Modification Workflow
 
 ```
 site_counts <- filtered_genes %>%
@@ -142,7 +149,7 @@ site_counts <- filtered_genes %>%
       TRUE ~ "unknown"
     )
   )
-```
+  
 summary_stats <- site_counts %>%
   group_by(gene_id_clean, mod, group, replicate_group) %>%
   summarise(
@@ -151,8 +158,6 @@ summary_stats <- site_counts %>%
     n_replicates = n_distinct(experiment),
     .groups = "drop"
   )
-
-#
 
 
 Gene_of_interest <- summary_stats_named %>%
@@ -169,7 +174,6 @@ Gene_of_interest <- summary_stats_named %>%
   drop_na(replicate_exposure)
 
 
-#
 ggplot(top5_m6a_df, aes(x = gene_symbol, y = mean_norm_sites, fill = replicate_exposure)) +
   geom_col(position = position_dodge(width = 0.8), color = "black", width = 0.7) +
   scale_fill_manual(values = group_colors) +
@@ -185,3 +189,4 @@ ggplot(top5_m6a_df, aes(x = gene_symbol, y = mean_norm_sites, fill = replicate_e
     legend.position = "bottom",
     plot.title = element_text(size = 14, face = "bold")
   )
+```
