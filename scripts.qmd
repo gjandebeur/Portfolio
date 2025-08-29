@@ -5,7 +5,7 @@ listing:
   contents: scripts
   sort: "title desc"
   type: "table"
-  fields: [title, description, category]
+  fields: [title, description]
   grid-columns: 2
 ---
 
