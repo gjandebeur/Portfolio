@@ -1,6 +1,7 @@
 ---
 title: "genome_assembly"
-format: html
+description: "De Novo and Reference-Based Alignment & Genome Assembly"
+categories: [bash,genome,assembly, rna004]
 ---
 
 # genome_assembly library prep through SNP analyses

@@ -1,6 +1,7 @@
 ---
 title: "differential_analyses"
-format: html
+description: "Workflow for both Diff. Expression and Modification, including PCA and Volcano plot"
+categories: [bash, R, differential, expression, modification]
 ---
 
 # Differential Expression and Modification Script
