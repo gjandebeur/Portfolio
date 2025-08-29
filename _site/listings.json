@@ -2,18 +2,18 @@
   {
     "listing": "/scripts.html",
     "items": [
-      "/scripts/Accuracy_Substitution_Plot.html",
-      "/scripts/differential_analyses.html",
-      "/scripts/exon_length.html",
-      "/scripts/genome_assembly.html",
-      "/scripts/GO_analysis.html",
-      "/scripts/Modkit_Analysis_dRNAseq.html",
-      "/scripts/Modkit_Apptainer.html",
-      "/scripts/motif_analysis.html",
-      "/scripts/old_workflow.html",
       "/scripts/pA_analysis.html",
+      "/scripts/old_workflow.html",
+      "/scripts/motif_analysis.html",
+      "/scripts/genome_assembly.html",
+      "/scripts/exon_length.html",
+      "/scripts/differential_analyses.html",
+      "/scripts/Substitutionplot.html",
       "/scripts/Stoich_Analysis.html",
-      "/scripts/Substitutionplot.html"
+      "/scripts/Modkit_Apptainer.html",
+      "/scripts/Modkit_Analysis_dRNAseq.html",
+      "/scripts/GO_analysis.html",
+      "/scripts/Accuracy_Substitution_Plot.html"
     ]
   }
 ]

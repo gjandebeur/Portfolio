@@ -3,10 +3,10 @@ title: "Scripts"
 format: html
 listing:
   contents: scripts
-  sort: "date desc"
-  type: "grid"
+  sort: "title desc"
+  type: "table"
   fields: [title, description, category]
-  grid-columns: 3
+  grid-columns: 2
 ---
 
 # Collection of scripts I've written:
