@@ -1,6 +1,7 @@
 ---
 title: "motif_analysis"
-format: html
+description: "Determination of Motif using Modkit Output"
+categories: [R, motif, modkit, rna004]
 ---
 
 ### investigation of motif for each sample/species

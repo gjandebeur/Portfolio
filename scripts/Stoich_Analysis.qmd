@@ -1,6 +1,7 @@
 ---
 title: "Stoich_Analysis"
-format: html
+description: "Stiochiometry of Modifications for RNA-Seq"
+categories: [bash, stoichiometry, modifications, rna004]
 ---
 
 ### Script to view stoichiometry (useful for downstream comparisons)

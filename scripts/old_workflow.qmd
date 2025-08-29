@@ -1,6 +1,7 @@
 ---
 title: "old_workflow"
-format: html
+description: "Full pipeline for RNA002 data (old chemistry)"
+categories: [bash, pipeline, rna002]
 ---
 
 # Pipeline for analysis of the Old Chemistry (RNA002) 

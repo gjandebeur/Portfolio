@@ -1,6 +1,7 @@
 ---
 title: "Substitutionplot"
-format: html
+description: "R script to create substitution plot"
+categories: [R, accuracy, rna004]
 ---
 
 ```

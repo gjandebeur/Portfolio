@@ -1,6 +1,7 @@
 ---
 title: "pA_analysis"
-format: html
+description: "Statistical Analysis for Poly-A Tail Lengths"
+categories: [R, poly-A, tail, rna004]
 ---
 
 ### script to visualize poly-A tail lengths 

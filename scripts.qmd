@@ -5,7 +5,7 @@ listing:
   contents: scripts
   sort: "date desc"
   type: "grid"
-  fields: [image, title, description]
+  fields: [title, description, category]
   grid-columns: 3
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Accuracy_Substitution_Plot"
-format: html
+description: "Library prep for Substitution Plot"
+categories: [bash, accuracy, rna004]
 ---
 
 # Substitutionplot

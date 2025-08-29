@@ -1,6 +1,7 @@
 ---
 title: "exon_length"
-format: html
+description: "Script to determine exon lengths for bulk RNA-seq data"
+categories: [bash, exon, modtype, rna004]
 ---
 
 ### determining exon lengths in methylated vs unmethylated samples
