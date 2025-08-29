@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,13 +30,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -67,7 +69,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -165,20 +225,202 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Modkit Installation</strong> <code>Using singularity/apptainer to install modkit  onto OSCER for up-to-date analyses</code> <a href="./scripts/Modkit_Apptainer.html">View</a></p>
 </div>
 <div class="card">
-<p><strong>Helpful R Scripts for Analysis</strong> <code>Downstream analysis options from  pA, exon length, stoich, and etc</code> <a href="./scripts/pA_analysis.html">View polyA Length</a> | <a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
+<p><strong>Helpful R Scripts for Analysis</strong> <code>Downstream analysis options from  pA, exon length, stoich, and etc</code> <a href="./scripts/pA_analysis.html">View polyA Length</a> |</p>
+<p><a href="./scripts/motif_analysis.html">View motif analysis</a> | <a href="./scripts/exon_length.html">View Exon Length</a> | <a href="./scripts/Stoich_Analysis.html">View Stoichiometry</a> | <a href="./scripts/GO_analysis.html">View GO Analysis</a></p>
 </div>
 <div class="card">
 <p><strong>Differential Expression and Modification</strong> <code>Script to perform Differential Expression, Modification, and PCA plot</code> <a href="./scripts/differential_analyses.html">View</a></p>
 </div>
 </div>
-<!-- -[RNA002 Workflow (OLD)](/scripts/old_workflow.qmd) -->
-<!-- -[Genome Assembly](/scripts/genome_assembly.qmd) -->
-<!-- -[Script 3]() -->
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1756477502326" data-listing-reading-time-sort="13" data-listing-word-count-sort="2499">
+<a href="./scripts/old_workflow.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+old_workflow
+</h5>
+<div class="card-text listing-description delink">
+full start to finish workflow for basecalling and minimapping for rna002 data <em>designed for OSCER supercomputer, ignore batch script/slurm parts for local/others</em>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
+<a href="./scripts/Stoich_Analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Stoich_Analysis
+</h5>
+<div class="card-text listing-description delink">
+library(tidyverse) library(ggpubr)<br>
+library(viridis)
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="5" data-listing-word-count-sort="948">
+<a href="./scripts/Modkit_Analysis_dRNAseq.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Modkit_Analysis_dRNAseq
+</h5>
+<div class="card-text listing-description delink">
+Workflow for analyses of m6A Modifications Post Modkit Filtering
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1756477502326" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
+<a href="./scripts/motif_analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+motif_analysis
+</h5>
+<div class="card-text listing-description delink">
+library(stringr) library(dplyr) library(ggplot2)
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1756477502326" data-listing-reading-time-sort="9" data-listing-word-count-sort="1777">
+<a href="./scripts/genome_assembly.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+genome_assembly
+</h5>
+<div class="card-text listing-description delink">
+full pipeline for genome assembly (de novo &amp; reference-based)
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1756477502326" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
+<a href="./scripts/pA_analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+pA_analysis
+</h5>
+<div class="card-text listing-description delink">
+suppressPackageStartupMessages({ library(data.table) library(tidyverse) library(tidytable) library(ggplot2) library(stringr) library(dplyr) })
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
+<a href="./scripts/Substitutionplot.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Substitutionplot
+</h5>
+<div class="card-text listing-description delink">
+<code>&lt;img width="1024" height="1536" alt="Substitution Plot Jul 9, 2025" src="https://github.com/user-attachments/assets/5e0a4fbe-6812-4c3f-ae4a-617e8cf9f60a" /&gt;
+
+args &lt;-…</code>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="7" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="2" data-listing-word-count-sort="271">
+<a href="./scripts/exon_length.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+exon_length
+</h5>
+<div class="card-text listing-description delink">
+library(GenomicFeatures) library(dplyr) library(stringr) library(ggplot2)
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="8" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="3" data-listing-word-count-sort="406">
+<a href="./scripts/Accuracy_Substitution_Plot.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Accuracy_Substitution_Plot
+</h5>
+<div class="card-text listing-description delink">
+Full Pipeline to produce a plot showing accuracy of basecaller reads compared to reference.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="9" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
+<a href="./scripts/Modkit_Apptainer.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Modkit_Apptainer
+</h5>
+<div class="card-text listing-description delink">
+workflow for running modkit on OSCER. Uses singularity/apptainer to update up to glibc2.18 so that modkit can run.
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="10" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="5" data-listing-word-count-sort="995">
+<a href="./scripts/differential_analyses.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+differential_analyses
+</h5>
+<div class="card-text listing-description delink">
+
+
+<pre><code>library(txdbmaker)
+library(GenomicFeatures)
+
+txdb &lt;- makeTxDbFromGFF("reference.gtf")
+
+k &lt;- keys(txdb, keytype = "TXNAME")  # make sure keytype exists
+tx2gene &lt;-…</code></pre><section id="prep-the-de-dataset" class="level3"><pre><code></code></pre></section><section id="batch-corrected-pca-creation" class="level2"><pre><code></code></pre></section>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="11" data-listing-file-modified-sort="1756477502325" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
+<a href="./scripts/GO_analysis.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+GO_analysis
+</h5>
+<div class="card-text listing-description delink">
+load dependencies
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

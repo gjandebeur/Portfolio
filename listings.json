@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/scripts.html",
+    "items": [
+      "/scripts/old_workflow.html",
+      "/scripts/Stoich_Analysis.html",
+      "/scripts/Modkit_Analysis_dRNAseq.html",
+      "/scripts/motif_analysis.html",
+      "/scripts/genome_assembly.html",
+      "/scripts/pA_analysis.html",
+      "/scripts/Substitutionplot.html",
+      "/scripts/exon_length.html",
+      "/scripts/Accuracy_Substitution_Plot.html",
+      "/scripts/Modkit_Apptainer.html",
+      "/scripts/differential_analyses.html",
+      "/scripts/GO_analysis.html"
+    ]
+  }
+]
